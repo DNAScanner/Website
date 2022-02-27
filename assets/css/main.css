@@ -1,0 +1,206 @@
+/*----------------------------------
+--           Disclaimer           --
+--                                --
+--                                --
+-- This Website including         --
+-- the Pictures, CSS, JavaScript  --
+-- and HTML is fully              --
+-- made by me [DNAScanner].       --
+-- I learned most things about    --
+-- CSS and HTML                   --
+-- from https://w3schools.com.    --
+----------------------------------*/
+
+/*-----------
+-- Imports --
+-----------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu');
+
+/*-------------
+-- Variables --
+-------------*/
+
+:root {
+	--fontFamily: 'Roboto', sans-serif;
+	--fontSize: 3vh;
+
+	--outerFrameSpace: 5vw;
+}
+
+/*-------------
+-- Basic CSS --
+-------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	scroll-behavior: smooth;
+}
+
+html {
+	border: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(38, 38, 38, 1);
+}
+
+body {
+	border: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+	/* animation: backgroundAnim 35s infinite; */
+}
+
+#Content {
+	display: flexbox;
+	margin-top: 5vh;
+	margin-left: var(--outerFrameSpace);
+	margin-right: var(--outerFrameSpace);
+}
+
+img:not(.navbarElement),
+video {
+	border-radius: 1vh;
+	display: block;
+	margin: auto;
+}
+
+video {
+	display: block;
+	margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p,
+a {
+	font-family: var(--fontFamily);
+	text-align: center;
+	color: rgba(255, 255, 255, 1);
+}
+
+h1,
+p {
+	font-size: var(--fontSize);
+}
+
+a {
+	color: rgb(255, 94, 30);
+}
+
+.box {
+	border: 0.4vh rgba(24, 24, 24, 1) solid;
+	background-color: rgba(28, 28, 28, 0.3);
+	border-radius: 1.5vh;
+}
+
+.homeHeader {
+	color: rgb(208, 52, 255);
+	margin-bottom: 5vh;
+}
+
+.homeHeader::after {
+	content: ' DNAScanner';
+	animation: homeHeaderAnim 10s infinite;
+}
+
+.categorizer {
+	height: 0.3vh;
+	width: 100%;
+	background-color: rgba(0, 255, 255, 1);
+	border-radius: 1.5vh;
+}
+
+.homeCategory {
+	margin-bottom: 1vh;
+}
+
+.homeInformation {
+	margin-bottom: 4vh;
+	font-size: calc(var(--fontSize) * 0.75);
+}
+
+.backgroundPreload {
+	height: 0;
+	width: 0;
+	display: block;
+	opacity: 0;
+}
+
+.discordWidget {
+	width: 100%;
+	height: 85vh;
+	margin-top: 3vh;
+}
+
+.colorEpicRed {
+	color: rgba(160, 0, 0, 1);
+}
+
+.errorOrange {
+	color: rgba(255, 177, 31, 1);
+}
+
+/*--------------
+-- Animations --
+--------------*/
+
+@keyframes homeHeaderAnim {
+	50% {
+		content: ' YouTuber & Streamer';
+	}
+
+	75% {
+		content: ' ein Designer';
+	}
+
+	100% {
+		content: ' ein Developer';
+	}
+}
+
+@keyframes backgroundAnim {
+	0% {
+		background-image: url(../background/1.png);
+	}
+
+	14.2% {
+		background-image: url(../background/2.png);
+	}
+
+	28.4% {
+		background-image: url(../background/3.png);
+	}
+
+	42.6% {
+		background-image: url(../background/4.png);
+	}
+
+	56.8% {
+		background-image: url(../background/5.png);
+	}
+
+	71.0% {
+		background-image: url(../background/6.png);
+	}
+
+	85.2% {
+		background-image: url(../background/7.png);
+	}
+
+	100% {
+		background-image: url(../background/1.png);
+	}
+}

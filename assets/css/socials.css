@@ -1,0 +1,99 @@
+/*----------------------------------
+--           Disclaimer           --
+--                                --
+--                                --
+-- This Website including         --
+-- the Pictures, CSS, JavaScript  --
+-- and HTML is fully              --
+-- made by me [DNAScanner].       --
+-- I learned most things about    --
+-- CSS and HTML                   --
+-- from https://w3schools.com.    --
+----------------------------------*/
+
+/*-------------
+-- Variables --
+-------------*/
+
+:root {
+	--socialsOuterFrameSpace: calc(var(--outerFrameSpace) * 3);
+
+	--cardSpacing: 3.5vh;
+	--cardHeight: 12.5vh;
+}
+
+/*-------------
+-- Basic CSS --
+-------------*/
+
+#Content {
+	margin-left: var(--socialsOuterFrameSpace);
+	margin-right: var(--socialsOuterFrameSpace);
+}
+
+.socials {
+	text-align: center;
+	display: flexbox;
+}
+
+.socialsElement.card {
+	margin-left: calc(var(--cardSpacing) * 0.8);
+	margin-right: calc(var(--cardSpacing) * 0.8);
+	margin-bottom: calc(var(--cardHeight) * 0.2);
+	width: calc((100vh / 3) - (var(--cardSpacing) * 2));
+	height: var(--cardHeight);
+	display: inline-block;
+	background-color: rgba(24, 24, 24, 1);
+	border-radius: 2vh;
+	opacity: 1;
+	transition: all 0.35s;
+}
+
+.socials:hover .card {
+	opacity: 0.5;
+}
+
+.socialsElement.card:hover {
+	opacity: 1;
+}
+
+.socialsElement.appIcon {
+	--iconHeight: 6.25vh;
+	height: var(--iconHeight);
+	float: left;
+	margin-left: -2vw;
+	margin-top: calc((var(--cardHeight) - var(--iconHeight)) * 0.5);
+	border-radius: 20%;
+}
+
+.socialsElement.appDetails {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 0;
+	grid-auto-flow: row;
+	grid-template-areas:
+		'appName'
+		'appLink';
+
+	margin-left: 2.5vw;
+	padding-top: 2vh;
+}
+
+.socialsElement.appName,
+.socialsElement.appLink {
+	text-align: start;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.socialsElement.appName {
+	grid-area: appName;
+	font-weight: 600;
+}
+
+.socialsElement.appLink {
+	grid-area: appLink;
+	font-weight: 400;
+	margin-top: 0.4vh;
+}

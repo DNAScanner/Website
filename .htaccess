@@ -1,0 +1,2 @@
+ErrorDocument 404 /assets/main/404.html
+IndexOptions +Charset=UTF-8

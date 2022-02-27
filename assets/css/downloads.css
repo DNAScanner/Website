@@ -1,0 +1,41 @@
+/*----------------------------------
+--           Disclaimer           --
+--                                --
+--                                --
+-- This Website including         --
+-- the Pictures, CSS, JavaScript  --
+-- and HTML is fully              --
+-- made by me [DNAScanner].       --
+-- I learned most things about    --
+-- CSS and HTML                   --
+-- from https://w3schools.com.    --
+----------------------------------*/
+
+/*-------------
+-- Basic CSS --
+-------------*/
+
+.downloadsCategory {
+	color: rgba(138, 43, 226, 1);
+}
+
+.downloadsButton,
+.downloadsName {
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.downloadsName::after {
+	content: ' | ';
+}
+
+.downloadsButton {
+	color: rgba(0, 255, 255, 1);
+}
+
+.downloadsDescription {
+	margin-top: 1vh;
+	font-size: calc(var(--fontSize) * 0.55);
+}
