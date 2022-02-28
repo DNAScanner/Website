@@ -113,7 +113,7 @@ a {
 
 .homeHeader::after {
 	content: ' DNAScanner';
-	animation: homeHeaderAnim 10s infinite;
+	animation: homeHeaderAnim 15s infinite;
 }
 
 .categorizer {
