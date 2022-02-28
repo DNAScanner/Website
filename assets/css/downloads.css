@@ -35,6 +35,10 @@
 	color: rgba(0, 255, 255, 1);
 }
 
+.downloadsVideo {
+	width: 70vw;
+}
+
 .downloadsDescription {
 	margin-top: 1vh;
 	font-size: calc(var(--fontSize) * 0.55);
