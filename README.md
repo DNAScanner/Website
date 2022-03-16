@@ -1,2 +1,2 @@
 # Website
-https://DNAScanner.de
+[Website](https://DNAScanner.de)
