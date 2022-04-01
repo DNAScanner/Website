@@ -43,16 +43,12 @@
 html {
 	border: 0;
 	margin: 0;
-	height: 100%;
-	width: 100%;
 	background-color: rgba(38, 38, 38, 1);
 }
 
 body {
 	border: 0;
 	margin: 0;
-	height: 100%;
-	width: 100%;
 	background-size: cover;
 	background-attachment: fixed;
 	/* animation: backgroundAnim 35s infinite; */
