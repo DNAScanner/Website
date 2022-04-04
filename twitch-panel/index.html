@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+	<head>
+		<!--- OpenGraph --->
+		<og>
+			<meta name="og:title" content="DNAScanner - Twitch Panel" />
+			<meta name="og:site_name" content="DNAScanner.de" />
+			<meta
+				name="og:url"
+				content="https://dnascanner.de/twitch-panel"
+			/>
+			<meta
+				name="og:description"
+				content="Hey, welcome on my Website :D"
+			/>
+			<meta name="og:type" content="website" />
+			<meta
+				name="og:image"
+				content="https://dnascanner.de/assets/icon/1024x1024.png"
+			/>
+			<meta name="theme-color" content="#9300BC" />
+		</og>
+
+		<!--- Controls --->
+		<title>Home » DNAScanner</title>
+		<meta name="description" content="Hey, welcome on my Website :D" />
+		<meta name="robots" content="index, follow" />
+		<meta http-equiv="expires" content="10800" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+
+		<!--- Links --->
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/navbar.css" />
+		<link
+			rel="shortcut icon"
+			href="../favicon.ico"
+			type="image/x-icon"
+		/>
+	</head>
+	<!--- Body --->
+	<body>
+		<div id="Content">
+			<script>
+				//Create a text field for the user to enter their Twitch username and save it to a variable
+				var twitchUsername = prompt(
+					'Please enter your Twitch username:'
+				);
+
+				//Check if the user really inputted a username, prompt them to do so if they didn't
+				if (twitchUsername == null || twitchUsername == '') {
+					alert('Please enter a username!');
+					location.reload();
+				}
+
+				//Console log the username
+				console.log(
+					'Twitch username inputted: ' + twitchUsername
+				);
+
+				//Show the username as an h1
+                        var twitchUsername = document.createElement('h1');
+                        twitchUsername.innerHTML = "Twitch Username: " + twitchUsername;
+                        document.getElementById('Content').appendChild(twitchUsername);
+
+				//Create a button to open the user's twitch chat
+				var twitchChatButton = document.createElement('button');
+				twitchChatButton.innerHTML = 'Open Twitch Chat';
+				twitchChatButton.id = 'twitchChatButton';
+				twitchChatButton.onclick = function () {
+					window.open(
+						'https://twitch.tv/' +
+							twitchUsername +
+							'/chat',
+						//Open it as a popup
+						'_blank',
+						'width=400,height=650',
+						'resizable=yes',
+						'scrollbars=yes'
+					);
+				};
+				document.body.appendChild(twitchChatButton);
+			</script>
+		</div>
+	</body>
+</html>

@@ -61,6 +61,11 @@ body {
 	margin-right: var(--outerFrameSpace);
 }
 
+button {
+	text-align: center;
+}
+
+
 img:not(.navbarElement),
 video {
 	border-radius: 1vh;
