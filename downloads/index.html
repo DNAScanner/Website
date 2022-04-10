@@ -68,6 +68,13 @@
 					});
 				}
 			});
+
+			//Stream the videos from the server instead of downloading them
+			function streamVideo(video) {
+				var video = document.getElementById(video);
+				video.setAttribute("src", video.getAttribute("data-src"));
+				video.classList.remove("lazy");
+			}
 		</script>
 	</head>
 	<!--- Body --->
