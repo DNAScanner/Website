@@ -39,43 +39,7 @@
 			type="image/x-icon"
 		/>
 
-		<script>
-			//Add lazyload to all videos
-			document.addEventListener("DOMContentLoaded", function() {
-				var lazyVideos = [].slice.call(document.querySelectorAll("iframe"));
-				if ("IntersectionObserver" in window) {
-					let lazyVideoObserver = new IntersectionObserver(function(
-						entries,
-						observer
-					) {
-						entries.forEach(function(video) {
-							if (video.isIntersecting) {
-								let source = video.target.getAttribute("data-src");
-								video.target.setAttribute("src", source);
-								video.target.classList.remove("lazy");
-								lazyVideoObserver.unobserve(video.target);
-							}
-						});
-					});
-
-					lazyVideos.forEach(function(video) {
-						lazyVideoObserver.observe(video);
-					});
-				} else {
-					lazyVideos.forEach(function(video) {
-						video.setAttribute("src", video.getAttribute("data-src"));
-						video.classList.remove("lazy");
-					});
-				}
-			});
-
-			//Stream the videos from the server instead of downloading them
-			function streamVideo(video) {
-				var video = document.getElementById(video);
-				video.setAttribute("src", video.getAttribute("data-src"));
-				video.classList.remove("lazy");
-			}
-		</script>
+		<script src="../assets/script/lazyloading.js"></script>
 	</head>
 	<!--- Body --->
 	<body>
@@ -178,7 +142,7 @@
 				</h1>
 				<video
 					class="downloadsVideo"
-					src="../assets/downloads/video/backpacks.mp4"
+					data-src="../assets/downloads/video/backpacks.mp4"
 					controls
 				></video>
 				<h1 class="downloadsDescription">
@@ -207,7 +171,7 @@
 				</h1>
 				<video
 					class="downloadsVideo"
-					src="../assets/downloads/video/foerderband.mp4"
+					data-src="../assets/downloads/video/foerderband.mp4"
 					controls
 				></video>
 				<h1 class="downloadsDescription">
@@ -234,7 +198,7 @@
 				</h1>
 				<video
 					class="downloadsVideo"
-					src="../assets/downloads/video/jetpack.mp4"
+					data-src="../assets/downloads/video/jetpack.mp4"
 					controls
 				></video>
 				<h1 class="downloadsDescription">
@@ -262,7 +226,7 @@
 				</h1>
 				<video
 					class="downloadsVideo"
-					src="../assets/downloads/video/playeractivities.mp4"
+					data-src="../assets/downloads/video/playeractivities.mp4"
 					controls
 				></video>
 				<h1 class="downloadsDescription">
@@ -290,7 +254,7 @@
 				</h1>
 				<video
 					class="downloadsVideo"
-					src="../assets/downloads/video/publicspawn.mp4"
+					data-src="../assets/downloads/video/publicspawn.mp4"
 					controls
 				></video>
 				<h1 class="downloadsDescription">
@@ -320,7 +284,7 @@
 				</h1>
 				<video
 					class="downloadsVideo"
-					src="../assets/downloads/video/sethome.mp4"
+					data-src="../assets/downloads/video/sethome.mp4"
 					controls
 				></video>
 				<h1 class="downloadsDescription">
@@ -351,7 +315,7 @@
 				</h1>
 				<video
 					class="downloadsVideo"
-					src="../assets/downloads/video/survivalstatus.mp4"
+					data-src="../assets/downloads/video/survivalstatus.mp4"
 					controls
 				></video>
 				<h1 class="downloadsDescription">
@@ -384,7 +348,7 @@
 				</h1>
 				<video
 					class="downloadsVideo"
-					src="../assets/downloads/video/timers.mp4"
+					data-src="../assets/downloads/video/timers.mp4"
 					controls
 				></video>
 				<h1 class="downloadsDescription">
@@ -414,7 +378,7 @@
 				</h1>
 				<video
 					class="downloadsVideo"
-					src="../assets/downloads/video/veining.mp4"
+					data-src="../assets/downloads/video/veining.mp4"
 					controls
 				></video>
 				<h1 class="downloadsDescription">
@@ -441,7 +405,7 @@
 				</h1>
 				<video
 					class="downloadsVideo"
-					src="../assets/downloads/video/xpdisplay.mp4"
+					data-src="../assets/downloads/video/xpdisplay.mp4"
 					controls
 				></video>
 				<h1 class="downloadsDescription">
@@ -476,7 +440,7 @@
 				</h1>
 				<video
 					class="downloadsVideo"
-					src="../assets/downloads/video/webp_codec.mp4"
+					data-src="../assets/downloads/video/webp_codec.mp4"
 					controls
 				></video>
 				<h1 class="downloadsDescription">
