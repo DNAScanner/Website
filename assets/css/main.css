@@ -27,11 +27,36 @@
 	--fontSize: 3vh;
 
 	--outerFrameSpace: 5vw;
+
+	--scrollbarMargin: 1vh;
 }
 
 /*-------------
 -- Basic CSS --
 -------------*/
+
+::-webkit-scrollbar {
+      width: 12px;
+}
+
+::-webkit-scrollbar-track {
+      background-color: rgba(127, 127, 127, 1);
+      border-radius: 50vh;
+      margin-top: var(--scrollbarMargin);
+      margin-bottom: var(--scrollbarMargin);
+      margin-right: var(--scrollbarMargin);
+}
+
+::-webkit-scrollbar-thumb {
+      background-color: rgba(56, 56, 56, 1);
+      border-radius: 50vh;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgb(52, 52, 52);
+      border: 50%;
+	transition: all 0.5s;
+}
 
 * {
 	margin: 0;
