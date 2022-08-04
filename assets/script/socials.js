@@ -33,26 +33,3 @@ fetch("../assets/json/socials.json")
 			};
 		});
 	});
-
-//If a .card is hovered, blur the other cards
-socialsContainer.addEventListener("mouseover", (e) => {
-	if (e.target.classList.contains("socialsElement")) {
-		socials.forEach((social) => {
-			if (social.element !== e.target) {
-				social.element.style.opacity = "0.5";
-			} else {
-				social.element.style.opacity = "1";
-			}
-		});
-	}
-});
-
-//If a .card is not hovered, set the opacity of all cards to 1
-socialsContainer.addEventListener("mouseout", (e) => {
-	//Check if the hovered object is a children of a card
-	if (e.target.classList.contains("socialsElement")) {
-		socials.forEach((social) => {
-			social.element.style.opacity = "1";
-		});
-	}
-});
