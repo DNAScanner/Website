@@ -16,8 +16,7 @@
 -------------*/
 
 :root {
-	--navHeight: 10vh;
-	--navWidth: 97vh;
+	--navHeight: 6rem;
 	--basicFontWeight: 700;
 }
 
@@ -27,11 +26,11 @@
 
 .navbar {
 	overflow: hidden;
-	margin-top: 1.5vh;
-	margin-left: 1.5vh;
-	margin-right: 1.5vh;
+	margin-top: 1rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
 	background-color: rgba(0, 0, 0, 0.6);
-	border-radius: 2.3vh;
+	border-radius: 1.75rem;
 	height: var(--navHeight);
 }
 
@@ -39,8 +38,8 @@
 	float: left;
 	height: calc(var(--navHeight) * 0.8);
 	margin-top: calc(var(--navHeight) * 0.1);
-	margin-left: 10vh;
-	border-radius: 0.75vh;
+	margin-left: 7.5rem;
+	border-radius: 0.75rem;
 	vertical-align: middle;
 }
 
@@ -48,7 +47,7 @@
 	display: block;
 	list-style: none;
 	float: right;
-	margin-right: 5vh;
+	margin-right: 4rem;
 }
 
 .navbarElement.element {
@@ -57,17 +56,16 @@
 }
 
 .navbarElement.linkIcon {
-	transform: rotate(0deg);
-	padding-right: 0.4vh;
-	margin-bottom: -0.5vh;
+	padding-right: 0.1rem;
+	vertical-align: middle;
 	border-radius: 0;
 }
 
 .navbarElement.elementLink {
 	color: rgba(0, 255, 255, 1);
 	font-weight: var(--basicFontWeight);
-	font-size: 1.5vh;
+	font-size: 0.9rem;
 	text-transform: uppercase;
-	margin-left: 5vh;
+	margin-left: 2rem;
 	transition: all 0.25s ease-in-out;
 }

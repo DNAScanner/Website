@@ -73,8 +73,8 @@
 	gap: 0;
 	grid-auto-flow: row;
 	grid-template-areas:
-		'appName'
-		'appLink';
+		"appName"
+		"appLink";
 
 	margin-left: 2.5vw;
 	padding-top: 2vh;

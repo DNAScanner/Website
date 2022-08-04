@@ -1,458 +1,153 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html>
-	<head>
-		<!--- OpenGraph --->
-		<og>
-			<meta name="og:title" content="DNAScanner - Downloads" />
-			<meta name="og:site_name" content="DNAScanner.de" />
-			<meta name="og:url" content="https://dnascanner.de" />
-			<meta
-				name="og:description"
-				content="Hey, welcome on my Website :D"
-			/>
-			<meta name="og:type" content="website" />
-			<meta
-				name="og:image"
-				content="https://dnascanner.de/assets/icon/1024x1024.png"
-			/>
-			<meta name="theme-color" content="#9300BC" />
-		</og>
+      <head>
+            <!--- OpenGraph --->
+            <og>
+                  <meta name="og:title" content="DNAScanner - Downloads" />
+                  <meta name="og:site_name" content="DNAScanner.de" />
+                  <meta name="og:url" content="https://dnascanner.de" />
+                  <meta
+                        name="og:description"
+                        content="Hey, welcome on my Website :D"
+                  />
+                  <meta name="og:type" content="website" />
+                  <meta
+                        name="og:image"
+                        content="https://dnascanner.de/assets/icon/1024x1024.png"
+                  />
+                  <meta name="theme-color" content="#9300BC" />
+            </og>
 
-		<!--- Controls --->
-		<title>Downloads » DNAScanner</title>
-		<meta name="description" content="Hey, welcome on my Website :D" />
-		<meta name="robots" content="index, follow" />
-		<meta http-equiv="expires" content="10800" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
+            <!--- Controls --->
+            <title>Downloads » DNAScanner</title>
+            <meta name="description" content="Hey, welcome on my Website :D" />
+            <meta name="robots" content="index, follow" />
+            <meta http-equiv="expires" content="10800" />
+            <meta
+                  name="viewport"
+                  content="width=device-width, initial-scale=1.0"
+            />
 
-		<!--- Links --->
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<link rel="stylesheet" href="../assets/css/navbar.css" />
-		<link rel="stylesheet" href="../assets/css/downloads.css" />
-		<link
-			rel="shortcut icon"
-			href="../favicon.ico"
-			type="image/x-icon"
-		/>
+            <!--- Links --->
+            <link rel="stylesheet" href="../assets/css/main.css" />
+            <link rel="stylesheet" href="../assets/css/navbar.css" />
+            <link rel="stylesheet" href="../assets/css/downloads.css" />
+            <link
+                  rel="shortcut icon"
+                  href="../favicon.ico"
+                  type="image/x-icon"
+            />
 
-		<script src="../assets/script/lazyloading.js"></script>
-	</head>
-	<!--- Body --->
-	<body>
-		<!--- Navbar --->
-		<ul class="navbar">
-			<!--- Logo --->
-			<img
-				src="../assets/icon/64x64.png"
-				alt="Logo"
-				class="logo navbarElement"
-			/>
+            <script src="../assets/script/downloads.js" defer></script>
+            <script src="../assets/script/lazyloading.js"></script>
+      </head>
+      <!--- Body --->
+      <body>
+            <!--- Navbar --->
+            <ul class="navbar">
+                  <!--- Logo --->
+                  <img
+                        src="../assets/icon/64x64.png"
+                        alt="Logo"
+                        class="logo navbarElement"
+                  />
 
-			<div class="elementContainer navbarElement">
-				<!--- Home --->
-				<li class="element navbarElement">
-					<a href="../" class="elementLink navbarElement"
-						><img
-							src="../assets/app-icon/home.svg"
-							alt="home"
-							class="linkIcon navbarElement"
-						/>Home</a
-					>
-				</li>
+                  <div class="elementContainer navbarElement">
+                        <!--- Home --->
+                        <li class="element navbarElement">
+                              <a href="../" class="elementLink navbarElement"
+                                    ><img
+                                          src="../assets/icons/home.svg"
+                                          alt="home"
+                                          class="linkIcon navbarElement"
+                                    />Home</a
+                              >
+                        </li>
 
-				<!--- Discord --->
-				<li class="element navbarElement">
-					<a
-						href="../discord"
-						class="elementLink navbarElement"
-						><img
-							src="../assets/app-icon/discord.svg"
-							alt="discord"
-							class="linkIcon navbarElement"
-						/>Discord</a
-					>
-				</li>
+                        <!--- Discord --->
+                        <li class="element navbarElement">
+                              <a
+                                    href="../discord"
+                                    class="elementLink navbarElement"
+                                    ><img
+                                          src="../assets/icons/discord.svg"
+                                          alt="discord"
+                                          class="linkIcon navbarElement"
+                                    />Discord</a
+                              >
+                        </li>
 
-				<!--- Downloads --->
-				<li class="element navbarElement">
-					<a
-						href="../downloads"
-						class="elementLink navbarElement"
-						><img
-							src="../assets/app-icon/download.svg"
-							alt="downloads"
-							class="linkIcon navbarElement"
-						/>Downloads</a
-					>
-				</li>
+                        <!--- Downloads --->
+                        <li class="element navbarElement">
+                              <a
+                                    href="../downloads"
+                                    class="elementLink navbarElement"
+                                    ><img
+                                          src="../assets/icons/download.svg"
+                                          alt="downloads"
+                                          class="linkIcon navbarElement"
+                                    />Downloads</a
+                              >
+                        </li>
 
-				<!--- Socials --->
-				<li class="element navbarElement">
-					<a
-						href="../socials"
-						class="elementLink navbarElement"
-						><img
-							src="../assets/app-icon/people.svg"
-							alt="socials"
-							class="linkIcon navbarElement"
-						/>Socials</a
-					>
-				</li>
+                        <!--- Socials --->
+                        <li class="element navbarElement">
+                              <a
+                                    href="../socials"
+                                    class="elementLink navbarElement"
+                                    ><img
+                                          src="../assets/icons/people.svg"
+                                          alt="socials"
+                                          class="linkIcon navbarElement"
+                                    />Socials</a
+                              >
+                        </li>
 
-				<!--- Imprint --->
-				<li class="element navbarElement">
-					<a
-						href="../imprint"
-						class="elementLink navbarElement"
-						><img
-							src="../assets/app-icon/contact.svg"
-							alt="imprint"
-							class="linkIcon navbarElement"
-						/>Impressum</a
-					>
-				</li>
-			</div>
-		</ul>
-		<!--- Navbar End --->
+                        <!--- Imprint --->
+                        <li class="element navbarElement">
+                              <a
+                                    href="../imprint"
+                                    class="elementLink navbarElement"
+                                    ><img
+                                          src="../assets/icons/contact.svg"
+                                          alt="imprint"
+                                          class="linkIcon navbarElement"
+                                    />Impressum</a
+                              >
+                        </li>
+                  </div>
+            </ul>
+            <!--- Navbar End --->
 
-		<div id="Content">
-			<h1 class="homeCategory">Downloads</h1>
-			<br /><br />
-			<h1 class="downloadsCategory" id="datapacks">Datapacks</h1>
-			<br /><br /><br />
-			<div class="categorizer"></div>
-			<br /><br />
+            <div id="Content">
+                  <h1 class="homeCategory">
+                        Downloads
+                        <button onclick="expandSearch()">
+                              <img
+                                    src="../assets/icons/search.svg"
+                                    class="search"
+                              ></img>
+                        </button>
+                  </h1>
 
-			<!--- Backpacks --->
-			<div class="box">
-				<h1 class="downloadsTitle">
-					<h1 class="downloadsName">Backpacks</h1>
-					<a
-						href="../assets/downloads/source/Backpacks.zip"
-						download="Backpacks.zip"
-						target="_blank"
-						><h1 class="downloadsButton">
-							Download
-						</h1></a
-					>
-				</h1>
-				<video
-					class="downloadsVideo"
-					data-src="../assets/downloads/video/backpacks.mp4"
-					controls
-				></video>
-				<h1 class="downloadsDescription">
-					Wenn man <i>1 Fass</i>, <i>4 Eisen</i> und
-					<i>4 Leder</i> auf den gleichen Block wirft werden
-					diese Items zu einem Backpack. Den Backpack kann
-					man durch <i>droppen</i> öffnen. Dort kann man
-					Items problemlos speichern
-				</h1>
-				<br />
+			<div class="searchWrapper">
+				<input
+					type="search"
+					id="search"
+					placeholder="Search"
+                              downloadsSearch
+				/>
 			</div>
 
-			<br /><br /><br />
-			<!--- Förderband --->
-			<div class="box">
-				<h1 class="downloadsTitle">
-					<h1 class="downloadsName">Förderband</h1>
-					<a
-						href="../assets/downloads/source/Foerderband.zip"
-						download="Förderband.zip"
-						target="_blank"
-						><h1 class="downloadsButton">
-							Download
-						</h1></a
-					>
-				</h1>
-				<video
-					class="downloadsVideo"
-					data-src="../assets/downloads/video/foerderband.mp4"
-					controls
-				></video>
-				<h1 class="downloadsDescription">
-					Das Förderband Datapack ermöglicht es, Entities
-					(Spieler, Items, ArmorStands, etc.) über das
-					Förderband zu transportieren
-				</h1>
-				<br />
-			</div>
-
-			<br /><br /><br />
-			<!--- Jetpack --->
-			<div class="box">
-				<h1 class="downloadsTitle">
-					<h1 class="downloadsName">Jetpack</h1>
-					<a
-						href="../assets/downloads/source/Jetpack.zip"
-						download="Jetpack.zip"
-						target="_blank"
-						><h1 class="downloadsButton">
-							Download
-						</h1></a
-					>
-				</h1>
-				<video
-					class="downloadsVideo"
-					data-src="../assets/downloads/video/jetpack.mp4"
-					controls
-				></video>
-				<h1 class="downloadsDescription">
-					Mit dem Jetpack-Datapack kann man mit
-					Chainmail-Boots fliegen, in dem man beim Starten
-					Shift drückt. Damit kann man unendlich weit in den
-					Lüften fliegen
-				</h1>
-				<br />
-			</div>
-
-			<br /><br /><br />
-			<!--- PlayerActivities --->
-			<div class="box">
-				<h1 class="downloadsTitle">
-					<h1 class="downloadsName">PlayerActivities</h1>
-					<a
-						href="../assets/downloads/source/PlayerActivities.zip"
-						download="PlayerActivities.zip"
-						target="_blank"
-						><h1 class="downloadsButton">
-							Download
-						</h1></a
-					>
-				</h1>
-				<video
-					class="downloadsVideo"
-					data-src="../assets/downloads/video/playeractivities.mp4"
-					controls
-				></video>
-				<h1 class="downloadsDescription">
-					Mit PlayerActivities ist es möglich, mit z.B.
-					<i>/trigger imMining</i> seinen Spieler Status auf
-					[Mining] zu setzen. Dadurch können andere Spieler
-					wissen, was der jeweilige Spieler gerade macht
-				</h1>
-				<br />
-			</div>
-
-			<br /><br /><br />
-			<!--- PublicSpawn --->
-			<div class="box">
-				<h1 class="downloadsTitle">
-					<h1 class="downloadsName">PublicSpawn</h1>
-					<a
-						href="../assets/downloads/source/PublicSpawn.zip"
-						download="PublicSpawn.zip"
-						target="_blank"
-						><h1 class="downloadsButton">
-							Download
-						</h1></a
-					>
-				</h1>
-				<video
-					class="downloadsVideo"
-					data-src="../assets/downloads/video/publicspawn.mp4"
-					controls
-				></video>
-				<h1 class="downloadsDescription">
-					Das PublicSpawn-Datapack ermöglicht es, wenn man
-					den <u>PSpawn.perm</u>-tag hat, per
-					<i>/trigger PSpawn.setspawn</i> die
-					Spawn-Koordinaten zu setzen. Jeder Spieler kann
-					sich per <i>/trigger spawn</i> zum gesetzten Spawn
-					teleportieren
-				</h1>
-				<br />
-			</div>
-
-			<br /><br /><br />
-			<!--- Sethome --->
-			<div class="box">
-				<h1 class="downloadsTitle">
-					<h1 class="downloadsName">Sethome</h1>
-					<a
-						href="../assets/downloads/source/Sethome.zip"
-						download="Sethome.zip"
-						target="_blank"
-						><h1 class="downloadsButton">
-							Download
-						</h1></a
-					>
-				</h1>
-				<video
-					class="downloadsVideo"
-					data-src="../assets/downloads/video/sethome.mp4"
-					controls
-				></video>
-				<h1 class="downloadsDescription">
-					Mit dem Sethome Datapack kann man durch
-					<i>/trigger SetHome</i> sein "Zuhause" zu setzen.
-					Mit <i>/trigger WarpHome</i> kommt man wieder zu
-					seinem "Zuhause" ohne jeglichen Schaden zu
-					bekommen. Es ist es sogar möglich, sich über die
-					unterschiedlichen Welten zu teleportieren (Dies
-					gilt nur bei normalen Welten)
-				</h1>
-				<br />
-			</div>
-
-			<br /><br /><br />
-			<!--- SurvivalStatus --->
-			<div class="box">
-				<h1 class="downloadsTitle">
-					<h1 class="downloadsName">SurvivalStatus</h1>
-					<a
-						href="../assets/downloads/source/SurvivalStatus.zip"
-						download="SurvivalStatus.zip"
-						target="_blank"
-						><h1 class="downloadsButton">
-							Download
-						</h1></a
-					>
-				</h1>
-				<video
-					class="downloadsVideo"
-					data-src="../assets/downloads/video/survivalstatus.mp4"
-					controls
-				></video>
-				<h1 class="downloadsDescription">
-					Setzt per <i>/trigger cam</i> den Status des
-					Ausführenden auf Camera. Solange man in diesem
-					Modus ist, ist man in dem <u>Spectator-Mode</u>.
-					Per <i>/trigger normal</i> wird man an die
-					Position, an der man den <u>Camera</u>-Mode
-					betreten hat zurück teleportiert. Die Befehle
-					<i>/trigger rec</i> sowie
-					<i>/trigger live</i> setzen vor den Namen einen
-					Prefix
-				</h1>
-				<br />
-			</div>
-
-			<br /><br /><br />
-			<!--- Timers --->
-			<div class="box">
-				<h1 class="downloadsTitle">
-					<h1 class="downloadsName">Timers</h1>
-					<a
-						href="../assets/downloads/source/Timers.zip"
-						download="Timers.zip"
-						target="_blank"
-						><h1 class="downloadsButton">
-							Download
-						</h1></a
-					>
-				</h1>
-				<video
-					class="downloadsVideo"
-					data-src="../assets/downloads/video/timers.mp4"
-					controls
-				></video>
-				<h1 class="downloadsDescription">
-					Per <i>/trigger StartTimer</i> kann man einen
-					Timer starten, der in der Actionbar angezeigt
-					wird. Per <i>/trigger PauseTimer</i> kann man
-					diesen pausieren und per
-					<i>/trigger ResetTimer</i> kann man diesen
-					resetten
-				</h1>
-				<br />
-			</div>
-
-			<br /><br /><br />
-			<!--- Veining --->
-			<div class="box">
-				<h1 class="downloadsTitle">
-					<h1 class="downloadsName">Veining</h1>
-					<a
-						href="../assets/downloads/source/Veining.zip"
-						download="Veining.zip"
-						target="_blank"
-						><h1 class="downloadsButton">
-							Download
-						</h1></a
-					>
-				</h1>
-				<video
-					class="downloadsVideo"
-					data-src="../assets/downloads/video/veining.mp4"
-					controls
-				></video>
-				<h1 class="downloadsDescription">
-					Das Veining-Datapack ermöglicht es, wenn man neben
-					einem Erz steht, dieses und alle verbundenen
-					abzubauen
-				</h1>
-				<br />
-			</div>
-
-			<br /><br /><br />
-			<!--- XP-Display --->
-			<div class="box">
-				<h1 class="downloadsTitle">
-					<h1 class="downloadsName">XP-Display</h1>
-					<a
-						href="../assets/downloads/source/XP-Display.zip"
-						download="XPDisplay.zip"
-						target="_blank"
-						><h1 class="downloadsButton">
-							Download
-						</h1></a
-					>
-				</h1>
-				<video
-					class="downloadsVideo"
-					data-src="../assets/downloads/video/xpdisplay.mp4"
-					controls
-				></video>
-				<h1 class="downloadsDescription">
-					Das XP-Display-Datapack ermöglicht es, per
-					<i
-						>/scoreboard players set {Spieler}
-						XP-Display {Zahl}</i
-					>
-					eine Zahl in der XP-Leiste anzeigen zu lassen
-				</h1>
-				<br />
-			</div>
-
-			<br /><br /><br />
-			<h1 class="downloadsCategory" id="scripts">Scripts</h1>
-			<br /><br /><br />
-			<div class="categorizer"></div>
-			<br /><br />
-
-			<!--- Backpacks --->
-			<div class="box">
-				<h1 class="downloadsTitle">
-					<h1 class="downloadsName">Image Convertor</h1>
-					<a
-						href="../assets/downloads/source/webp_codec.zip"
-						download="webp_codec.zip"
-						target="_blank"
-						><h1 class="downloadsButton">
-							Download
-						</h1></a
-					>
-				</h1>
-				<video
-					class="downloadsVideo"
-					data-src="../assets/downloads/video/webp_codec.mp4"
-					controls
-				></video>
-				<h1 class="downloadsDescription">
-					Mit meinem kleinen Script, welches eine
-					Modifikation für das erleichterte convertieren
-					mithilfe <i>Google's Webp</i> Programm ermöglicht,
-					lassen sich <i>.webp</i>, <i>.jpg</i> und
-					<i>.jpeg</i>-Dateien durch wenige clicks in
-					<i>.png</i>-Dateien umwandeln
-				</h1>
-				<br />
-			</div>
-		</div>
-	</body>
+                  <div class="downloadsWrapper" downloadsWrapper>
+                        <template downloadsTemplate>
+					<div class="downloadsCard box">
+					<h1 class="downloadsTitle"><y downloadsTitle></y> <a target="_blank" downloadsDownload>Download</a></h1>
+					<video controls downloadsVideo></video>
+					<p class="downloadsDescription" downloadsDescription></p>
+                        </template>
+                  </div>
+            </div>
+      </body>
 </html>

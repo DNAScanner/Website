@@ -1,0 +1,67 @@
+[
+	{
+		"title": "Discord",
+		"link": "https://discord.com/users/45474547444755756465",
+		"icon": "discordbg.svg"
+	},
+
+	{
+		"title": "Server",
+		"link": "https://discord.dnascanner.de/",
+		"icon": "discordbg.svg"
+	},
+
+	{
+		"title": "Minecraft",
+		"link": "https://namemc.com/profile/b8585956-e17c-4b19-8787-46d75e225783",
+		"icon": "minecraft.svg"
+	},
+
+	{
+		"title": "GitHub",
+		"link": "https://github.com/DNAScanner",
+		"icon": "github.svg"
+	},
+
+	{
+		"title": "Website",
+		"link": "https://dnascanner.de",
+		"icon": "link.svg"
+	},
+
+	{
+		"title": "Spotify",
+		"link": "https://open.spotify.com/user/9tcgf7pzh5l7x996g42l7xtrp",
+		"icon": "spotify.svg"
+	},
+
+	{
+		"title": "Steam",
+		"link": "https://steamcommunity.com/profiles/76561198019506098",
+		"icon": "steam.svg"
+	},
+
+	{
+		"title": "Twitter",
+		"link": "https://twitter.com/@dna_scanner",
+		"icon": "twitter.svg"
+	},
+
+	{
+		"title": "Reddit",
+		"link": "https://www.reddit.com/user/DNAScannerMC",
+		"icon": "reddit.svg"
+	},
+
+	{
+		"title": "Twitch",
+		"link": "https://www.twitch.tv/dnascanner",
+		"icon": "twitch.svg"
+	},
+
+	{
+		"title": "YouTube",
+		"link": "https://youtube.dnascanner.de/",
+		"icon": "youtube.svg"
+	}
+]
