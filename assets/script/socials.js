@@ -18,7 +18,6 @@ fetch("../assets/json/socials.json")
 
 			socialsTitle.textContent = social.title;
 			socialsLink.setAttribute("href", social.link);
-			console.log(socialsTitle);
 			socialsLinkDisplay.textContent = social.link.substring(0, 30);
 			socialsIcon.setAttribute("src", "../assets/icons/" + social.icon);
 
