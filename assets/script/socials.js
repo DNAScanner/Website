@@ -8,6 +8,17 @@ let socials = [];
 fetch("../assets/json/socials.json")
 	.then((res) => res.json())
 	.then((data) => {
+		if (location.search.includes("run=")) {
+			let run = location.search.split("run=")[1].split("&")[0];
+			console.log(run);
+			data.forEach((social) => {
+				if (social.id == run) {
+					open(social.link, "_self");
+					console.log("Opened " + social.link);
+				}
+			})
+		}
+
 		socials = data.map((social) => {
 			const socialsCard = socialsTemplate.content.cloneNode(true).children[0];
 
@@ -17,11 +28,20 @@ fetch("../assets/json/socials.json")
 			const socialsIcon = socialsCard.querySelector("[socialsIcon]");
 
 			socialsTitle.textContent = social.title;
-			socialsLink.setAttribute("href", social.link);
+			socialsLink.setAttribute("href", `${location.href}?run=${social.id}`);
 			socialsLinkDisplay.textContent = social.link.substring(0, 30);
 			socialsIcon.setAttribute("src", "../assets/icons/" + social.icon);
 
 			socialsContainer.appendChild(socialsCard);
+
+			//If the user right clicks, copy the url
+			socialsCard.addEventListener("contextmenu", (event) => {
+				event.preventDefault();
+				setTimeout(() => {
+					navigator.clipboard.writeText(`${location.href}?run=${social.id}`);
+					alert("Copied short link to your clipboard!");
+				}, 200)
+			})
 
 			return {
 				title: social.title,

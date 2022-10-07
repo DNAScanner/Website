@@ -14,7 +14,7 @@
 		</og>
 
 		<!--- Controls --->
-		<title>Downloads » DNAScanner</title>
+		<title>Imprint » DNAScanner</title>
 		<meta name="description" content="Hey, welcome on my Website :D" />
 		<meta name="robots" content="index, follow" />
 		<meta http-equiv="expires" content="10800" />
@@ -24,6 +24,7 @@
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<link rel="stylesheet" href="../assets/css/navbar.css" />
 		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+		<script src="../assets/script/imprint.js" defer></script>
 	</head>
 	<!--- Body --->
 	<body>
@@ -38,16 +39,6 @@
 					<a href="../" class="elementLink navbarElement"><img src="../assets/icons/home.svg" alt="home" class="linkIcon navbarElement" />Home</a>
 				</li>
 
-				<!--- Discord --->
-				<li class="element navbarElement">
-					<a href="../discord" class="elementLink navbarElement"><img src="../assets/icons/discord.svg" alt="discord" class="linkIcon navbarElement" />Discord</a>
-				</li>
-
-				<!--- Downloads --->
-				<li class="element navbarElement">
-					<a href="../downloads" class="elementLink navbarElement"><img src="../assets/icons/download.svg" alt="downloads" class="linkIcon navbarElement" />Downloads</a>
-				</li>
-
 				<!--- Socials --->
 				<li class="element navbarElement">
 					<a href="../socials" class="elementLink navbarElement"><img src="../assets/icons/people.svg" alt="socials" class="linkIcon navbarElement" />Socials</a>
@@ -55,7 +46,7 @@
 
 				<!--- Imprint --->
 				<li class="element navbarElement">
-					<a href="../imprint" class="elementLink navbarElement"><img src="../assets/icons/contact.svg" alt="imprint" class="linkIcon navbarElement" />Impressum</a>
+					<a href="../imprint" class="elementLink navbarElement"><img src="../assets/icons/contact.svg" alt="imprint" class="linkIcon navbarElement" />Imprint</a>
 				</li>
 			</div>
 		</ul>
@@ -67,8 +58,21 @@
 			<h1 class="homeCategory">Kesselbergweg 8</h1>
 			<a href="mailto:contact@dnascanner.de"><h1>Mail</h1></a>
 			<br /><br />
+			<h1 onclick="triggerContactContainer()">Leave a message</h1>
+			<div class="box contactContainer hide" id="contactContainer">
+				<form name="leave-a-message" netlify>
+					<h1>
+						Name<br />
+						<input type="text" name="name" id="name" placeholder="Your name" required /><br /><br />
+						Message<br />
+						<textarea type="text" name="message" id="message" class="largeInput" placeholder="Your message" required></textarea><br /><br>
+						<button type="submit" class="contactSubmit box">Send</button>
+					</h1>
+				</form>
+			</div>
+			<br /><br />
 			<h1 class="homeCategory">Disclaimer</h1>
-			<h1 class="homeInformation colorEpicRed">Ich bin <u>nicht</u> verantwortlich für externe Websites</h1>
+			<h1 class="homeInformation colorEpicRed">I aint responsible for shit outside of this site</h1>
 		</div>
 	</body>
 </html>

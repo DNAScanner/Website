@@ -2,72 +2,84 @@
 	{
 		"title": "Discord",
 		"link": "https://discord.com/users/45474547444755756465",
-		"icon": "discordbg.svg"
+		"icon": "discordbg.svg",
+		"id": "discordUser"
 	},
 
 	{
 		"title": "Server",
 		"link": "https://discord.dnascanner.de/",
-		"icon": "discordbg.svg"
+		"icon": "discordbg.svg",
+		"id": "discordServer"
 	},
 
 	{
 		"title": "OhHellNaw",
 		"link": "https://discord.gg/9Gfy9pTBWr",
-		"icon": "ohhellnaw.png"
+		"icon": "ohhellnaw.png",
+		"id": "ohhellnaw"
 	},
 
 	{
 		"title": "Minecraft",
 		"link": "https://namemc.com/profile/b8585956-e17c-4b19-8787-46d75e225783",
-		"icon": "minecraft.svg"
+		"icon": "minecraft.svg",
+		"id": "minecraft"
 	},
 
 	{
 		"title": "GitHub",
 		"link": "https://github.com/DNAScanner",
-		"icon": "github.svg"
+		"icon": "github.svg",
+		"id": "github"
 	},
 
 	{
 		"title": "Website",
 		"link": "https://dnascanner.de",
-		"icon": "link.svg"
+		"icon": "link.svg",
+		"id": "website"
 	},
 
 	{
 		"title": "Spotify",
 		"link": "https://open.spotify.com/user/9tcgf7pzh5l7x996g42l7xtrp",
-		"icon": "spotify.svg"
+		"icon": "spotify.svg",
+		"id": "spotify"
 	},
 
 	{
 		"title": "Steam",
 		"link": "https://steamcommunity.com/profiles/76561198019506098",
-		"icon": "steam.svg"
+		"icon": "steam.svg",
+		"id": "steam"
 	},
 
 	{
 		"title": "Twitter",
 		"link": "https://twitter.com/@dna_scanner",
-		"icon": "twitter.svg"
+		"icon": "twitter.svg",
+		"id": "twitter"
 	},
 
 	{
 		"title": "Reddit",
 		"link": "https://www.reddit.com/user/DNAScannerMC",
-		"icon": "reddit.svg"
+		"icon": "reddit.svg",
+		"id": "reddit"
 	},
 
 	{
 		"title": "Twitch",
 		"link": "https://www.twitch.tv/dnascanner",
-		"icon": "twitch.svg"
+		"icon": "twitch.svg",
+		"id": "twitch"
 	},
 
 	{
 		"title": "YouTube",
 		"link": "https://youtube.dnascanner.de/",
-		"icon": "youtube.svg"
+		"icon": "youtube.svg",
+		"id": "youtube"
 	}
 ]
