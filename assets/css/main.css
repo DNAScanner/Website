@@ -43,6 +43,7 @@
 	padding: 0;
 	text-decoration: none;
 	scroll-behavior: smooth;
+	border: none;
 }
 
 ::-webkit-scrollbar {
@@ -93,6 +94,7 @@ button {
 }
 
 img:not(.navbarElement),
+.imprintMap,
 video {
 	border-radius: 0.5rem;
 	display: block;
@@ -226,6 +228,13 @@ textarea::placeholder {
 
 .contactContainer.hide {
 	display: none;
+}
+
+.imprintMap {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	height: 20rem;
 }
 
 
