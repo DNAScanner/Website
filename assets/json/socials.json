@@ -3,14 +3,7 @@
 		"title": "Discord",
 		"link": "https://discord.com/users/45474547444755756465",
 		"icon": "discordbg.svg",
-		"id": "discordUser"
-	},
-
-	{
-		"title": "Server",
-		"link": "https://discord.dnascanner.de/",
-		"icon": "discordbg.svg",
-		"id": "discordServer"
+		"id": "discord"
 	},
 
 	{

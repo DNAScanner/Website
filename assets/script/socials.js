@@ -37,8 +37,15 @@ fetch("../assets/json/socials.json")
 			//If the user right clicks, copy the url
 			socialsCard.addEventListener("contextmenu", (event) => {
 				event.preventDefault();
-				setTimeout(() => {
-					navigator.clipboard.writeText(`${location.href}?run=${social.id}`);
+				setTimeout(async () => {
+					// Request permission to access the clipboard
+					await navigator.permissions.query({ name: "clipboard-write" }).then(async (result) => {
+						if (result.state == "granted" || result.state == "prompt") {
+							// Copy the text to the clipboard
+							await navigator.clipboard.writeText(`${location.href}?run=${social.id}`)
+						}
+					});
+					
 					alert("Copied short link to your clipboard!");
 				}, 200)
 			})
