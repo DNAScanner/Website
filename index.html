@@ -1,79 +1,58 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
-		<!--- OpenGraph --->
-		<og>
-			<meta name="og:title" content="DNAScanner - Home" />
-			<meta name="og:site_name" content="DNAScanner.de" />
-			<meta name="og:url" content="https://dnascanner.de" />
-			<meta name="og:description" content="Hey, welcome on my Website :D" />
-			<meta name="og:type" content="website" />
-			<meta name="og:image" content="https://dnascanner.de/assets/icon/1024x1024.png" />
-			<meta name="theme-color" content="#9300BC" />
-		</og>
-
-		<!--- Controls --->
-		<title>Home » DNAScanner</title>
-		<meta name="description" content="Hey, welcome on my Website :D" />
-		<meta name="robots" content="index, follow" />
-		<meta http-equiv="expires" content="10800" />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="./profile_picture/circle.svg" type="image/svg+xml" />
+		<link rel="stylesheet" href="index.css" />
+		<title>DNAScanner</title>
 
-		<!--- Links --->
-		<link rel="stylesheet" href="./assets/css/main.css" />
-		<link rel="stylesheet" href="./assets/css/navbar.css" />
-		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="DNAScanner - Get to know me" />
+		<meta property="og:description" content="Hey, im DNAScanner, a full-stack developer" />
+		<meta property="og:url" content="https://dnascanner.de" />
+		<meta property="og:image" content="https://dnascanner.de/profile_picture/square_rounded.png" />
+		<meta property="og:image:alt" content="Epic logo (trust me brother)" />
+		<meta property="og:site_name" content="DNAScanner - Get to know me" />
+		<meta property="profile:first_name" content="Liam" />
+		<meta property="profile:last_name" content="Gruber" />
+		<meta property="profile:username" content="DNAScanner / DNA" />
+		<meta property="profile:gender" content="male" />
 	</head>
-	<!--- Body --->
 	<body>
-		<!--- Navbar --->
-		<ul class="navbar">
-			<!--- Logo --->
-			<img src="./assets/icon/64x64.png" alt="Logo" class="logo navbarElement" />
+		<a href="./" id="profile-picture-container" draggable="false"><img src="./profile_picture/circle.svg" alt="Profile picture" id="profile-picture-image" draggable="false" /></a>
 
-			<div class="elementContainer navbarElement">
-				<!--- Home --->
-				<li class="element navbarElement">
-					<a href="./" class="elementLink navbarElement"><img src="./assets/icons/home.svg" alt="home" class="linkIcon navbarElement" />Home</a>
-				</li>
-
-				<!--- Socials --->
-				<li class="element navbarElement">
-					<a href="./socials" class="elementLink navbarElement"><img src="./assets/icons/people.svg" alt="socials" class="linkIcon navbarElement" />Socials</a>
-				</li>
-
-				<!--- Imprint --->
-				<li class="element navbarElement">
-					<a href="./imprint" class="elementLink navbarElement"><img src="./assets/icons/contact.svg" alt="imprint" class="linkIcon navbarElement" />Imprint</a>
-				</li>
+		<div id="navigation">
+			<div id="navigation-container">
+				<a href="#home">Home</a>
+				<a href="#socials">Socials</a>
+				<a href="#imprint">Imprint</a>
 			</div>
-		</ul>
-		<!--- Navbar End --->
-
-		<div id="Content">
-			<h1 class="homeHeader">Hey, I am</h1>
-
-			<!--- Information --->
-			<h1 class="homeCategory">Discord</h1>
-			<h1 class="homeInformation">
-				In my free-time, most of the time i spend on discord chatting with people and playing games aswell as developing bots
-				<br />
-				You can find my servers in <a href="./socials/">my socials</a>
-			</h1>
-			<br />
-
-			<h1 class="homeCategory">About me</h1>
-			<h1 class="homeInformation">
-				My name is Liam, i am from germany and i currently am in school (sadly)
-			</h1>
-			<br />
-
-			<h1 class="homeCategory">About this site</h1>
-			<h1 class="homeInformation">
-				I thought that i might make this website kind of a game (i think), dont wait, i might do it, but probably not
-			</h1>
-			<br />
 		</div>
+
+		<div id="content">
+			<div id="home">
+				<h1>Hey! 👋</h1>
+				<h1>Im DNA, a full-stack developer from germany. Currently, i still am in school sadly. I really love creating new things and learning new methods and technologies.</h1>
+				<h1>When im not in school or not working on a project, im probably playing some games or watching some anime or youtube</h1>
+				<h1>If you want to get in contact with me, theres a link to my discord <a href="#socials" class="text-orange">below</a></h1>
+			</div>
+			<div id="socials">
+				<h1>Socials</h1>
+				<div id="cards"></div>
+			</div>
+			<div id="imprint">
+				<h1>Imprint</h1>
+
+				<div id="imprint-details">
+					<h1>Liam Gruber</h1>
+					<h1>78112 St. Georgen</h1>
+					<h1>Kesselbergweg 8</h1>
+				</div>
+			</div>
+		</div>
+
+		<script src="./index.js" defer></script>
 	</body>
 </html>
