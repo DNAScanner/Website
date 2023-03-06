@@ -1,3 +1,63 @@
+let lastTimeScrolled = Date.now();
+let autoScrollHappened = true;
+
+document.addEventListener("scroll", () => {
+	lastTimeScrolled = Date.now();
+	autoScrollHappened = false;
+})
+
+function update() {
+	let timeSinceLastScroll = Date.now() - lastTimeScrolled;
+
+	if (timeSinceLastScroll > 500 && !autoScrollHappened) {
+		let sections = document.getElementById("content").children;
+		let scrollHeight = window.scrollY + window.innerHeight * 0.5;
+
+		for (let section of sections) {
+			let sectionTop = section.offsetTop;
+			let sectionBottom = section.offsetTop + section.offsetHeight;
+
+			if (scrollHeight >= sectionTop && scrollHeight <= sectionBottom) {
+				let sectionId = section.id;
+
+				window.scrollTo({
+					top: sectionTop
+				})
+
+				break;
+			}
+		}
+
+		autoScrollHappened = true;
+	}
+
+	if (location.hash) {
+		let section = document.getElementById(location.hash.slice(1));
+
+		if (section) {
+			let sectionTop = section.offsetTop;
+			location.hash = "";
+
+			window.scrollTo({
+				top: sectionTop
+			})
+		}
+	}
+
+	requestAnimationFrame(update);
+}
+
+update();
+
+for (let section of document.getElementById("content").children) {
+	// Create an <a> element
+	let link = document.createElement("a");
+	link.href = `#${section.id}`;
+	link.innerText = section.id.charAt(0).toUpperCase() + section.id.slice(1);
+
+	document.getElementById("navigation-container").appendChild(link);
+}
+
 const socials = [
 	{
 		title: "Discord",
