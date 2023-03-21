@@ -103,12 +103,17 @@ body {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+	padding-top: 1.5rem;
 
 	border-bottom: 1px dashed var(--light-gray);
 }
 
 #content > *:last-child {
 	border-bottom: none;
+}
+
+#content > *:first-child {
+	padding-top: unset;
 }
 
 #home > * {
@@ -122,7 +127,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	margin-top: 1.5rem;
 }
 
 #cards {
@@ -184,9 +188,8 @@ body {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	margin-top: 1.5rem;
 }
 
 #imprint-details {
-      margin-top: 3rem;
+      padding-top: 3rem;
 }
