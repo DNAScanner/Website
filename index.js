@@ -85,9 +85,21 @@ update();
 for (let section of document.getElementById("content").children) {
 	let link = document.createElement("a");
 	link.href = `#${section.id}`;
-	link.innerText = section.id.charAt(0).toUpperCase() + section.id.slice(1);
+	link.id = `navigation-${section.id}`;
+	link.innerText = section.getAttribute("data-name") || section.id.charAt(0).toUpperCase() + section.id.slice(1);
 
 	document.getElementById("navigation-container").appendChild(link);
+}
+
+try {
+	fetch("https://dnascanner.duckdns.org/tictactoe/").then((response) => {
+		if (response.status === 200) {
+			document.getElementById("navigation-tictactoe").style.display = "block";
+			document.getElementById("tictactoe").style.display = "block";
+		}
+	});
+} catch (error) {
+	null;
 }
 
 const socials = [
