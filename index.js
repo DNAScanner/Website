@@ -1,4 +1,5 @@
 let sections = document.getElementById("content").children;
+let spoilers = document.getElementsByClassName("spoiler");
 let autoScrollHappened = true;
 let lastTimeScrolled = Date.now();
 let lastScrollHeight = 0;
@@ -82,6 +83,12 @@ function update() {
 
 update();
 
+for (let spoiler of spoilers) {
+	spoiler.addEventListener("click", () => {
+		spoiler.classList.add("spoiler-shown");
+	});
+}
+
 for (let section of document.getElementById("content").children) {
 	let link = document.createElement("a");
 	link.href = `#${section.id}`;
@@ -96,6 +103,7 @@ try {
 		if (response.status === 200) {
 			document.getElementById("navigation-tictactoe").style.display = "block";
 			document.getElementById("tictactoe").style.display = "block";
+			document.getElementById("home-tictactoe-mention").style.display = "block";
 		}
 	});
 } catch (error) {
