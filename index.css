@@ -98,12 +98,13 @@ body {
 	max-width: 10vw;
 	max-height: 10vh;
 	width: 100%;
+	border-radius: 50%;
 }
 
 #site {
 	display: grid;
 	grid-template-columns: min-content 1fr;
-	grid-gap: 5vw;
+	max-width: 100vw;
 }
 
 #navigation {
@@ -137,6 +138,7 @@ body {
 #content {
 	width: 100%;
 	padding-right: 5vw;
+	padding-left: 5vw;
 }
 
 #content > * {
@@ -275,5 +277,13 @@ body {
 
 	#cards > *:hover {
 		background-color: var(--light-gray);
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	#navigation {
+		width: 0;
+		opacity: 0;
+		pointer-events: none;
 	}
 }

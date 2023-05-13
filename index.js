@@ -3,7 +3,7 @@ let spoilers = document.getElementsByClassName("spoiler");
 let autoScrollHappened = true;
 let lastTimeScrolled = Date.now();
 let lastScrollHeight = 0;
-let autoScrollOn = true;
+let autoScrollOn = !("ontouchstart" in window || navigator.maxTouchPoints);
 
 document.addEventListener("scroll", () => {
 	lastTimeScrolled = Date.now();
@@ -11,6 +11,7 @@ document.addEventListener("scroll", () => {
 });
 
 function update() {
+	autoScrollOn = !("ontouchstart" in window || navigator.maxTouchPoints);
 	let scrollHeight = window.scrollY + window.innerHeight * 0.5;
 
 	if (location.hash) {
