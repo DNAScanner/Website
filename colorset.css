@@ -1,6 +1,7 @@
 :root {
 	--transparent: rgba(0, 0, 0, 0);
 	--black: #000000;
+	--dark-gray: #0a0a0a;
 	--gray: #191919;
 	--light-gray: #393939;
 	--slightly-lighter-gray: #595959;
