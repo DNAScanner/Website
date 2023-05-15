@@ -1,18 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
-:root {
-	--transparent: rgba(0, 0, 0, 0);
-	--black: #000000;
-	--gray: #191919;
-	--light-gray: #393939;
-	--slightly-lighter-gray: #595959;
-	--white: #ffffff;
-	--purple: #42098e;
-	--cyan: #1f5eff;
-	--orange: #ff8c00;
-	--yellow: #ffc400; /* !! Unused !! */
-	--green: #00ff00; /* !! Unused !! */
-}
 
 ::-webkit-scrollbar {
 	width: 0.65rem;
