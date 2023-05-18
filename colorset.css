@@ -9,6 +9,7 @@
 	--purple: #42098e;
 	--cyan: #1f5eff;
 	--orange: #ff8c00;
-	--yellow: #ffc400; /* !! Unused !! */
-	--green: #00ff00; /* !! Unused !! */
+	--yellow: #ffc400;
+	--green: #00ff00;
+	--shadow: rgba(1, 1, 1, 0.5);
 }
