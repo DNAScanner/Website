@@ -121,7 +121,7 @@ const socials = [
 
 	{
 		title: "OhHellNaw",
-		link: "https://discord.gg/9Gfy9pTBWr",
+		link: "https://discord.gg/7hkenyp6Xm",
 		icon: "ohhellnaw",
 		id: "ohhellnaw",
 	},
