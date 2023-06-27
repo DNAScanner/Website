@@ -110,12 +110,16 @@ body {
 }
 
 #navigation-container > a {
-	font-size: 5rem;
+	font-size: clamp(3rem, 5vw, 5rem);
 	font-weight: 700;
 	margin-bottom: 1.5vh;
 	width: min-content;
 	color: var(--purple);
 	transition: all 0.3s ease;
+}
+
+#navigation-container > a.current {
+	color: var(--slightly-lighter-gray);
 }
 
 #navigation-container > a:hover {
@@ -148,7 +152,7 @@ body {
 
 #home > * {
 	margin-bottom: 3vh;
-	font-size: 2rem;
+	font-size: clamp(1.5rem, 2vw, 2.5rem);
 	line-height: 2.25rem;
 }
 
@@ -173,7 +177,9 @@ body {
 
 #cards > * {
 	width: 20vw;
-	height: 20vh;
+	height: fit-content;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	background-color: var(--light-gray);
 	border-radius: 1rem;
 	display: flex;
@@ -197,13 +203,13 @@ body {
 }
 
 #cards > * > .socials-card-title {
-	font-size: 1.5rem;
+	font-size: clamp(1.5rem, 2vw, 2.5rem);
 	font-weight: 700;
 	margin-top: 0.5rem;
 }
 
 #cards > * > .socials-card-link {
-	font-size: 1rem;
+	font-size: clamp(1rem, 1.5vw, 2rem);
 	font-weight: 500;
 	margin-top: 0.5rem;
 	width: 100%;
@@ -237,7 +243,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	font-size: 1.5rem;
+	font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
 #imprint > *.spoiler::after {

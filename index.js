@@ -72,6 +72,10 @@ function update() {
 						top: closestSection.offsetTop,
 					});
 				}
+				for (let navigation of document.getElementById("navigation-container").children) if (/* Has class "current" */ navigation.classList.contains("current")) navigation.classList.remove("current");
+
+				document.getElementById(`navigation-${closestSection.id}`).classList.add("current");
+				console.log(closestSection);
 			}
 
 			autoScrollHappened = true;
@@ -95,6 +99,7 @@ for (let section of document.getElementById("content").children) {
 	link.href = `#${section.id}`;
 	link.id = `navigation-${section.id}`;
 	link.innerText = section.getAttribute("data-name") || section.id.charAt(0).toUpperCase() + section.id.slice(1);
+	if (section === document.getElementById("content").children[0] && autoScrollOn) link.classList.add("current");
 
 	document.getElementById("navigation-container").appendChild(link);
 }
@@ -111,70 +116,7 @@ try {
 	null;
 }
 
-const socials = [
-	{
-		title: "Discord",
-		link: "https://discord.com/users/538033136685285396",
-		icon: "discord",
-		id: "discord",
-	},
-
-	{
-		title: "OhHellNaw",
-		link: "https://discord.gg/7hkenyp6Xm",
-		icon: "ohhellnaw",
-		id: "ohhellnaw",
-	},
-
-	{
-		title: "GitHub",
-		link: "https://github.com/DNAScanner",
-		icon: "github",
-		id: "github",
-	},
-
-	{
-		title: "Spotify",
-		link: "https://open.spotify.com/user/9tcgf7pzh5l7x996g42l7xtrp",
-		icon: "spotify",
-		id: "spotify",
-	},
-
-	{
-		title: "Steam",
-		link: "https://steamcommunity.com/profiles/76561198019506098",
-		icon: "steam",
-		id: "steam",
-	},
-
-	{
-		title: "Twitter",
-		link: "https://twitter.com/@dnascanner",
-		icon: "twitter",
-		id: "twitter",
-	},
-
-	{
-		title: "Reddit",
-		link: "https://www.reddit.com/user/DNAScannerMC",
-		icon: "reddit",
-		id: "reddit",
-	},
-
-	{
-		title: "Twitch",
-		link: "https://www.twitch.tv/dnascanner",
-		icon: "twitch",
-		id: "twitch",
-	},
-
-	{
-		title: "YouTube",
-		link: "https://youtube.dnascanner.de/",
-		icon: "youtube",
-		id: "youtube",
-	},
-];
+const socials = await (await fetch("./socials.json")).json();
 
 for (let social of socials) {
 	let container = document.createElement("a");
