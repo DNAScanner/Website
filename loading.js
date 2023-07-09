@@ -13,25 +13,21 @@ document.head.appendChild(style);
 
 function addDotsToLoadingElements() {
 	const loadingElements = Array.from(document.getElementsByTagName("loading"));
-	loadingElements.forEach((element) => {
-		for (let i = 0; i < 3; i++) {
+
+	for (const element of loadingElements) {
+		while (element.childElementCount < 3) {
 			const newSpan = document.createElement("span");
 			newSpan.innerText = ".";
 			element.appendChild(newSpan);
 		}
-	});
+	}
 }
 
 addDotsToLoadingElements();
 
 const observer = new MutationObserver((mutations) => {
 	for (const mutation of mutations) {
-		if (mutation.type === "childList") {
-			const newElements = Array.from(mutation.addedNodes).filter((node) => node.tagName === "LOADING");
-			newElements.forEach((element) => {
-				addDotsToLoadingElements();
-			});
-		}
+		if (mutation.type === "childList") addDotsToLoadingElements();
 	}
 });
 
