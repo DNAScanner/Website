@@ -5,4 +5,4 @@
       
       foro = "/*.ts"
             [headers.values]
-            Content-Type = "Application/Typescript
+            Content-Type = "Application/Typescript"
