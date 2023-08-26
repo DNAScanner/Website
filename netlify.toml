@@ -2,3 +2,7 @@
       for = "/*"
             [headers.values]
             Access-Control-Allow-Origin = "*"
+      
+      foro = "/*.ts"
+            [headers.values]
+            Content-Type = "Application/Typescript
