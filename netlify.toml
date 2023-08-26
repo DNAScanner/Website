@@ -3,6 +3,6 @@
             [headers.values]
             Access-Control-Allow-Origin = "*"
       
-      foro = "/*.ts"
+      for = "/*.ts"
             [headers.values]
             Content-Type = "Application/Typescript"
