@@ -1,8 +1,0 @@
-[[headers]]
-      for = "/*"
-            [headers.values]
-            Access-Control-Allow-Origin = "*"
-      
-      for = "/*.ts"
-            [headers.values]
-            Content-Type = "Application/Typescript"
