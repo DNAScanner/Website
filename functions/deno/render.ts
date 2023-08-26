@@ -16,7 +16,7 @@ const render = (file: string, variables: Record<string, string>, ignoreNonReplac
 		text = text.replaceAll(pattern, variables[key]);
 	}
 
-	if (!ignoreNonReplacedVariables && text.match(/{{.+}}/gi)) throw new Error(`Non replaced variable found in ${chalk.blue(`file:///${path.join(Deno.cwd(), file)}`)}\n> ${text.match(/{{.+}}/gi)?.join("\n> ")}`);
+	if (!ignoreNonReplacedVariables && text.match(/{{.+}}/gi)) throw new Error(`Non replaced variable found in ${chalk.blue(`file:///${path.join(Deno.cwd(), file)}`)}\n> ${[...new Set(...(text.match(/{{.+}}/gi) || []))]?.join("\n> ")}`);
 
 	return text;
 };
