@@ -1,0 +1,4 @@
+# Download the file at "https://dnascanner.de/nLyrids/nlyrics.js" and save it to "$env:LOCALAPPDATA\spicetify\Extensions\nlyrics.js"
+spicetify config extensions nlyrics.js
+Invoke-WebRequest -Uri "https://dnascanner.de/nLyrids/nlyrics.js" -OutFile "$env:LOCALAPPDATA\spicetify\Extensions\nlyrics.js"
+spicetify apply enable-devtools
