@@ -1,8 +1,7 @@
-let sections = document.getElementById("content").children;
-let spoilers = document.getElementsByClassName("spoiler");
+const sections = document.getElementById("content").children;
+const spoilers = document.getElementsByClassName("spoiler");
 let autoScrollHappened = true;
 let lastTimeScrolled = Date.now();
-let lastScrollHeight = 0;
 let autoScrollOn = !("ontouchstart" in window || navigator.maxTouchPoints);
 
 document.addEventListener("scroll", () => {
@@ -12,13 +11,13 @@ document.addEventListener("scroll", () => {
 
 function update() {
 	autoScrollOn = !("ontouchstart" in window || navigator.maxTouchPoints);
-	let scrollHeight = window.scrollY + window.innerHeight * 0.5;
+	const scrollHeight = window.scrollY + window.innerHeight * 0.5;
 
 	if (location.hash) {
-		let section = document.getElementById(location.hash.slice(1));
+		const section = document.getElementById(location.hash.slice(1));
 
 		if (section) {
-			let sectionTop = section.offsetTop;
+			const sectionTop = section.offsetTop;
 			location.hash = "";
 
 			window.scrollTo({
@@ -27,14 +26,14 @@ function update() {
 		}
 	}
 
-	let timeSinceLastScroll = Date.now() - lastTimeScrolled;
+	const timeSinceLastScroll = Date.now() - lastTimeScrolled;
 
 	if (timeSinceLastScroll > 500 && !autoScrollHappened && autoScrollOn) {
 		let topSection = null;
 		let bottomSection = null;
 
-		for (let section of sections) {
-			let rect = section.getBoundingClientRect();
+		for (const section of sections) {
+			const rect = section.getBoundingClientRect();
 
 			if (rect.top < window.innerHeight && rect.bottom > 0) {
 				if (!topSection || rect.top > topSection.getBoundingClientRect().top) {
@@ -51,10 +50,10 @@ function update() {
 			let closestSection;
 			let closestDistance = Infinity;
 
-			for (let section of [topSection, bottomSection]) {
-				let sectionTop = section.offsetTop;
-				let sectionBottom = sectionTop + section.offsetHeight - 1;
-				let distance = Math.min(Math.abs(scrollHeight - sectionTop), Math.abs(scrollHeight - sectionBottom));
+			for (const section of [topSection, bottomSection]) {
+				const sectionTop = section.offsetTop;
+				const sectionBottom = sectionTop + section.offsetHeight - 1;
+				const distance = Math.min(Math.abs(scrollHeight - sectionTop), Math.abs(scrollHeight - sectionBottom));
 
 				if (distance < closestDistance) {
 					closestDistance = distance;
@@ -72,7 +71,7 @@ function update() {
 						top: closestSection.offsetTop,
 					});
 				}
-				for (let navigation of document.getElementById("navigation-container").children) if (/* Has class "current" */ navigation.classList.contains("current")) navigation.classList.remove("current");
+				for (const navigation of document.getElementById("navigation-container").children) if (/* Has class "current" */ navigation.classList.contains("current")) navigation.classList.remove("current");
 
 				document.getElementById(`navigation-${closestSection.id}`).classList.add("current");
 				console.log(closestSection);
@@ -88,14 +87,14 @@ function update() {
 
 update();
 
-for (let spoiler of spoilers) {
+for (const spoiler of spoilers) {
 	spoiler.addEventListener("click", () => {
 		spoiler.classList.add("spoiler-shown");
 	});
 }
 
-for (let section of document.getElementById("content").children) {
-	let link = document.createElement("a");
+for (const section of document.getElementById("content").children) {
+	const link = document.createElement("a");
 	link.href = `#${section.id}`;
 	link.id = `navigation-${section.id}`;
 	link.innerText = section.getAttribute("data-name") || section.id.charAt(0).toUpperCase() + section.id.slice(1);
@@ -112,29 +111,29 @@ try {
 			document.getElementById("home-tictactoe-mention").style.display = "block";
 		}
 	});
-} catch (error) {
+} catch (_error) {
 	null;
 }
 
 const socials = await (await fetch("./socials.json")).json();
 
-for (let social of socials) {
-	let container = document.createElement("a");
+for (const social of socials) {
+	const container = document.createElement("a");
 	container.classList.add("socials-card-container");
 	container.href = social.link;
 	container.target = "_blank";
 	container.rel = "noopener noreferrer";
 
-	let icon = document.createElement("img");
+	const icon = document.createElement("img");
 	icon.classList.add("socials-card-icon");
 	icon.src = `./platforms/${social.icon}.svg`;
 	icon.alt = social.title + " icon";
 
-	let title = document.createElement("h1");
+	const title = document.createElement("h1");
 	title.classList.add("socials-card-title");
 	title.innerText = social.title;
 
-	let link = document.createElement("h1");
+	const link = document.createElement("h1");
 	link.classList.add("socials-card-link");
 	link.innerText = social.link;
 
