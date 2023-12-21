@@ -2,6 +2,7 @@ const sections = document.getElementById("content").children;
 const spoilers = document.getElementsByClassName("spoiler");
 let autoScrollHappened = true;
 let lastTimeScrolled = Date.now();
+let lastScrollHeight = 0;
 let autoScrollOn = !("ontouchstart" in window || navigator.maxTouchPoints);
 
 document.addEventListener("scroll", () => {
@@ -74,7 +75,6 @@ function update() {
 				for (const navigation of document.getElementById("navigation-container").children) if (/* Has class "current" */ navigation.classList.contains("current")) navigation.classList.remove("current");
 
 				document.getElementById(`navigation-${closestSection.id}`).classList.add("current");
-				console.log(closestSection);
 			}
 
 			autoScrollHappened = true;
