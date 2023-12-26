@@ -1,4 +1,4 @@
-import chalk from "npm:chalk";
+import {crayon} from "https://deno.land/x/crayon@3.3.3/mod.ts";
 
 const render = (file: string, variables: Record<string, string>, ignoreNonReplacedVariables?: boolean) => {
 	if (ignoreNonReplacedVariables == null) ignoreNonReplacedVariables = false;
@@ -15,7 +15,7 @@ const render = (file: string, variables: Record<string, string>, ignoreNonReplac
 		text = text.replaceAll(pattern, variables[key]);
 	}
 
-	if (!ignoreNonReplacedVariables && text.match(/{{.+}}/gi)) throw new Error(`Non replaced variable found in ${chalk.blue(`file:///${file}`)}\n> ${text.match(/{{.+}}/gi)?.join("\n> ")}`);
+	if (!ignoreNonReplacedVariables && text.match(/{{.+}}/gi)) throw new Error(`Non replaced variable found in ${crayon.blue(`file:///${file}`)}\n> ${text.match(/{{.+}}/gi)?.join("\n> ")}`);
 
 	return text;
 };
