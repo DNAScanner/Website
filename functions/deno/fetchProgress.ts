@@ -35,7 +35,7 @@ const progressFetch = async (url: string, output: string) => {
 		}
 		const fileBytes = new Uint8Array(receivedBytes);
 		let offset = 0;
-		for (let chunk of chunks) {
+		for (const chunk of chunks) {
 			fileBytes.set(chunk, offset);
 			offset += chunk.length;
 		}
