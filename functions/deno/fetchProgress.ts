@@ -1,6 +1,6 @@
 import {crayon} from "https://deno.land/x/crayon@3.3.3/mod.ts";
 
-const progressFetch = async (url: string, output: string) => {
+const progressFetch = async (url: string, output: string, refreshRate?: number) => {
 	const response = await fetch(url);
 	const contentLength = response.headers.get("content-length");
 	const totalBytes = contentLength ? parseInt(contentLength, 10) : 0;
@@ -11,18 +11,19 @@ const progressFetch = async (url: string, output: string) => {
 	const chunks = [];
 	console.log();
 	const logInterval = setInterval(() => {
+		const consoleWidth = Deno.consoleSize().columns -25;
 		const elapsedTime = (Date.now() - startTime) / 1000;
 		const downloadSpeed = receivedBytes / elapsedTime / 1024 / 1024;
 		const remainingBytes = totalBytes - receivedBytes;
 		const remainingTime = remainingBytes / (downloadSpeed * 1024 * 1024);
 		const eta = remainingTime > 0 ? `${remainingTime.toFixed(2)}s` : "N/A";
-		const progress = Math.floor((receivedBytes / totalBytes) * 50);
-		const progressBar = `${crayon.green("=".repeat(progress))}${"-".repeat(50 - progress)}`;
+		const progress = Math.floor((receivedBytes / totalBytes) * (consoleWidth - 30));
+		const progressBar = `${crayon.green("=".repeat(progress))}${"-".repeat(consoleWidth - progress)}`;
 		const percentage = Math.floor((receivedBytes / totalBytes) * 100);
-		const currentTime = elapsedTime.toFixed(2);
-		const estimatedTotalTime = (elapsedTime + remainingTime).toFixed(2);
-		console.log(`\x1b[1F[${progressBar}] ${percentage}%   (${downloadSpeed.toFixed(2)} Mbps)   ETA: ${eta}   Time: ${currentTime}s   Total Estimated Time: ${estimatedTotalTime}s`);
-	}, 200);
+		const currentTime = `${elapsedTime.toFixed(2)}s`;
+		const estimatedTotalTime = `${(elapsedTime + remainingTime).toFixed(2)}s`;
+		console.log(`\x1b[2F\x1b[2M[${progressBar}] ${percentage}% (${downloadSpeed.toFixed(2)} Mbps) \n ETA: ${crayon.yellow(eta)}   Elapsed: ${crayon.yellow(currentTime)}   Total Est. Time: ${crayon.yellow(estimatedTotalTime)}`);
+	}, refreshRate || 200);
 	if (reader) {
 		while (true) {
 			const {done, value} = await reader.read();
