@@ -9,7 +9,7 @@ const progressFetch = async (url: string, output: string, refreshRate?: number) 
 	const startTime = Date.now();
 	const reader = response.body?.getReader();
 	const chunks = [];
-	console.log();
+	console.log("\n");
 	const logInterval = setInterval(() => {
 		const consoleWidth = Deno.consoleSize().columns -25;
 		const elapsedTime = (Date.now() - startTime) / 1000;
