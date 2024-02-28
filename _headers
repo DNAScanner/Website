@@ -2,4 +2,4 @@
       Access-Control-Allow-Origin: *
 
 /*.ts
-      Content-Type: Application/Typescript
+      Content-Type: Application/TypeScript

@@ -142,6 +142,10 @@ body {
 	border-bottom: 1px dashed var(--light-gray);
 }
 
+#content.touch > * {
+	min-height: 50vh;
+}
+
 #content > *:last-child {
 	border-bottom: none;
 }
