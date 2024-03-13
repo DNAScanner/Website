@@ -263,6 +263,30 @@ body {
 	text-align: center;
 }
 
+#not-found {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+}
+
+#not-found.hidden {
+	display: none;
+}
+
+#not-found > * {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	color: var(--slightly-lighter-gray);
+	width: 100%;
+	height: 100vh;
+	font-size: clamp(3rem, 5vw, 5rem);
+}
+
 @media (hover: none) {
 	.text-orange-cyan:hover {
 		color: var(--orange);

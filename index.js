@@ -1,5 +1,6 @@
 const sections = document.getElementById("content").children;
 const spoilers = document.getElementsByClassName("spoiler");
+let showNotFound = location.hash === "#not-found";
 let autoScrollHappened = true;
 let lastTimeScrolled = Date.now();
 let lastScrollHeight = 0;
@@ -76,7 +77,15 @@ function update() {
 				}
 				for (const navigation of document.getElementById("navigation-container").children) if (/* Has class "current" */ navigation.classList.contains("current")) navigation.classList.remove("current");
 
-				document.getElementById(`navigation-${closestSection.id}`).classList.add("current");
+				setTimeout(() => {
+					if (showNotFound && closestSection.id !== "not-found") showNotFound = false;
+				}, 1000)
+				
+				try {
+					if (showNotFound && closestSection.id === "not-found") document.getElementById(`navigation-${closestSection.id}`).classList.add("current");
+				} catch (_error) {
+					null;
+				}
 			}
 
 			autoScrollHappened = true;
@@ -96,6 +105,8 @@ for (const spoiler of spoilers) {
 }
 
 for (const section of document.getElementById("content").children) {
+	if (section.getAttribute("data-hide") == "true") continue;
+
 	const link = document.createElement("a");
 	link.href = `#${section.id}`;
 	link.id = `navigation-${section.id}`;
@@ -144,4 +155,11 @@ for (const social of socials) {
 	container.appendChild(link);
 
 	document.getElementById("cards").appendChild(container);
+}
+
+if (!showNotFound) 
+	document.getElementById("not-found").classList.add("hidden");
+else {
+	while (showNotFound) await new Promise((resolve) => setTimeout(resolve, 100));
+	document.getElementById("not-found").classList.add("hidden");
 }
