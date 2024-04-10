@@ -118,10 +118,6 @@ body {
 	transition: all 0.3s ease;
 }
 
-#navigation-container > a.current {
-	color: var(--slightly-lighter-gray);
-}
-
 #navigation-container > a:hover {
 	color: var(--cyan);
 }
@@ -191,6 +187,11 @@ body {
 	align-items: center;
 	flex-direction: column;
 	transition: all 0.3s ease;
+}
+
+#cards > *.highlight {
+	/* Create a gradient background, top left to bottom right, cyan to purple */
+	background: linear-gradient(45deg, var(--cyan), var(--purple));
 }
 
 #cards > *:hover {

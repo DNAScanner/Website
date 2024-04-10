@@ -75,17 +75,6 @@ function update() {
 						top: closestSection.offsetTop,
 					});
 				}
-				for (const navigation of document.getElementById("navigation-container").children) if (/* Has class "current" */ navigation.classList.contains("current")) navigation.classList.remove("current");
-
-				setTimeout(() => {
-					if (showNotFound && closestSection.id !== "not-found") showNotFound = false;
-				}, 1000)
-				
-				try {
-					if (showNotFound && closestSection.id === "not-found") document.getElementById(`navigation-${closestSection.id}`).classList.add("current");
-				} catch (_error) {
-					null;
-				}
 			}
 
 			autoScrollHappened = true;
@@ -111,7 +100,6 @@ for (const section of document.getElementById("content").children) {
 	link.href = `#${section.id}`;
 	link.id = `navigation-${section.id}`;
 	link.innerText = section.getAttribute("data-name") || section.id.charAt(0).toUpperCase() + section.id.slice(1);
-	if (section === document.getElementById("content").children[0] && autoScrollOn) link.classList.add("current");
 
 	document.getElementById("navigation-container").appendChild(link);
 }
@@ -133,6 +121,7 @@ const socials = await (await fetch("./socials.json")).json();
 for (const social of socials) {
 	const container = document.createElement("a");
 	container.classList.add("socials-card-container");
+	social.highlight && container.classList.add("highlight");
 	container.href = social.link;
 	container.target = "_blank";
 	container.rel = "noopener noreferrer";

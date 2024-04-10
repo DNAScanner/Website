@@ -3,54 +3,63 @@
 		"title": "Discord",
 		"link": "https://discord.com/users/538033136685285396",
 		"icon": "discord",
-		"id": "discord"
+		"id": "discord",
+		"highlight": false
 	},
 	{
 		"title": "OhHellNaw",
 		"link": "https://discord.gg/7hkenyp6Xm",
 		"icon": "ohhellnaw",
-		"id": "ohhellnaw"
+		"id": "ohhellnaw",
+		"highlight": true
 	},
 	{
 		"title": "GitHub",
 		"link": "https://github.com/DNAScanner",
 		"icon": "github",
-		"id": "github"
+		"id": "github",
+		"highlight": false
 	},
 	{
 		"title": "Spotify",
 		"link": "https://open.spotify.com/user/9tcgf7pzh5l7x996g42l7xtrp",
 		"icon": "spotify",
-		"id": "spotify"
+		"id": "spotify",
+		"highlight": false
 	},
 	{
 		"title": "Steam",
 		"link": "https://steamcommunity.com/profiles/76561198019506098",
 		"icon": "steam",
-		"id": "steam"
+		"id": "steam",
+		"highlight": false
 	},
 	{
 		"title": "Twitter",
 		"link": "https://twitter.com/@dnascanner",
 		"icon": "twitter",
-		"id": "twitter"
+		"id": "twitter",
+		"highlight": false
 	},
 	{
 		"title": "Reddit",
 		"link": "https://www.reddit.com/user/DNAScannerMC",
 		"icon": "reddit",
-		"id": "reddit"
+		"id": "reddit",
+		"highlight": false
 	},
 	{
 		"title": "Twitch",
 		"link": "https://www.twitch.tv/dnascanner",
 		"icon": "twitch",
-		"id": "twitch"
+		"id": "twitch",
+		"highlight": false
 	},
 	{
 		"title": "YouTube",
 		"link": "https://youtube.dnascanner.de/",
 		"icon": "youtube",
-		"id": "youtube"
+		"id": "youtube",
+		"highlight": false
 	}
 ]
