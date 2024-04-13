@@ -28,8 +28,22 @@
 	scroll-behavior: smooth;
 }
 
+@keyframes lmao {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
 body {
 	background-color: var(--gray);
+}
+
+body.rotate {
+	animation: lmao 3s linear infinite;
 }
 
 .text-orange-cyan {
@@ -138,10 +152,6 @@ body {
 	border-bottom: 1px dashed var(--light-gray);
 }
 
-#content.touch > * {
-	min-height: 50vh;
-}
-
 #content > *:last-child {
 	border-bottom: none;
 }
@@ -190,8 +200,14 @@ body {
 }
 
 #cards > *.highlight {
-	/* Create a gradient background, top left to bottom right, cyan to purple */
 	background: linear-gradient(45deg, var(--cyan), var(--purple));
+	rotate: 0deg;
+	transition: all 2s;
+}
+
+#cards > *.highlight:hover {
+	/* Rotate the background by 45 degrees */
+	rotate: 360deg;
 }
 
 #cards > *:hover {

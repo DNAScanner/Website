@@ -4,17 +4,25 @@ let showNotFound = location.hash === "#not-found";
 let autoScrollHappened = true;
 let lastTimeScrolled = Date.now();
 let lastScrollHeight = 0;
-let autoScrollOn = !("ontouchstart" in window || navigator.maxTouchPoints);
+let autoScrollOn = !("ontouchstart" in window);
 
 document.addEventListener("scroll", () => {
 	lastTimeScrolled = Date.now();
 	autoScrollHappened = false;
 });
 
-function update() {
-	autoScrollOn = !("ontouchstart" in window || navigator.maxTouchPoints);
+let keyInputs = "";
 
-	autoScrollOn ? document.getElementById("content").classList.add("touch") : document.getElementById("content").classList.remove("touch");
+document.addEventListener("keydown", (event) => {
+	keyInputs += event.key;
+
+	if (!keyInputs.toLowerCase().endsWith("rawr")) return;
+
+	autoScrollOn = false;
+	document.body.classList.add("rotate");
+});
+
+const update = () => {
 	const scrollHeight = window.scrollY + window.innerHeight * 0.5;
 
 	if (location.hash) {
@@ -83,7 +91,7 @@ function update() {
 	}
 
 	requestAnimationFrame(update);
-}
+};
 
 update();
 
@@ -146,8 +154,7 @@ for (const social of socials) {
 	document.getElementById("cards").appendChild(container);
 }
 
-if (!showNotFound) 
-	document.getElementById("not-found").classList.add("hidden");
+if (!showNotFound) document.getElementById("not-found").classList.add("hidden");
 else {
 	while (showNotFound) await new Promise((resolve) => setTimeout(resolve, 100));
 	document.getElementById("not-found").classList.add("hidden");
