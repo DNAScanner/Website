@@ -14,7 +14,7 @@ document.addEventListener("scroll", () => {
 function update() {
 	autoScrollOn = !("ontouchstart" in window || navigator.maxTouchPoints);
 
-	!autoScrollOn ? document.getElementById("content").classList.add("touch") : document.getElementById("content").classList.remove("touch");
+	autoScrollOn ? document.getElementById("content").classList.add("touch") : document.getElementById("content").classList.remove("touch");
 	const scrollHeight = window.scrollY + window.innerHeight * 0.5;
 
 	if (location.hash) {
