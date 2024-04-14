@@ -179,6 +179,9 @@ type Pin = {
 	for (const pin of pins) {
 		const wrapper = document.createElement("div");
 		wrapper.classList.add("pin-wrapper");
+		wrapper.addEventListener("click", () => {
+			window.open(pin.url, "_blank");
+		});
 
 		const title = document.createElement("span");
 		title.classList.add("pin-title");
