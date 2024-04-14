@@ -10,25 +10,21 @@ style.innerHTML = `
 	}
 `;
 document.head.appendChild(style);
-
 function addDotsToLoadingElements() {
-	const loadingElements = Array.from(document.getElementsByTagName("loading"));
-
-	for (const element of loadingElements) {
-		while (element.childElementCount < 3) {
-			const newSpan = document.createElement("span");
-			newSpan.innerText = ".";
-			element.appendChild(newSpan);
-		}
-	}
+    const loadingElements = Array.from(document.getElementsByTagName("loading"));
+    for (const element of loadingElements) {
+        while (element.childElementCount < 3) {
+            const newSpan = document.createElement("span");
+            newSpan.innerText = ".";
+            element.appendChild(newSpan);
+        }
+    }
 }
-
 addDotsToLoadingElements();
-
 const observer = new MutationObserver((mutations) => {
-	for (const mutation of mutations) {
-		if (mutation.type === "childList") addDotsToLoadingElements();
-	}
+    for (const mutation of mutations) {
+        if (mutation.type === "childList")
+            addDotsToLoadingElements();
+    }
 });
-
-observer.observe(document.body, {childList: true, subtree: true});
+observer.observe(document.body, { childList: true, subtree: true });
