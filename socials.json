@@ -1,6 +1,6 @@
 [
 	{
-		"title": "Discord",
+		"title": "Discord\nrealdna",
 		"link": "https://discord.com/users/538033136685285396",
 		"icon": "discord",
 		"id": "discord",
@@ -8,10 +8,17 @@
 	},
 	{
 		"title": "OhHellNaw",
-		"link": "https://discord.gg/7hkenyp6Xm",
+		"link": "https://ohhellnaw.de",
 		"icon": "ohhellnaw",
 		"id": "ohhellnaw",
 		"highlight": true
+	},
+	{
+		"title": "PayPal",
+		"link": "https://paypal.me/dnascanner",
+		"icon": "paypal",
+		"id": "paypal",
+		"highlight": false
 	},
 	{
 		"title": "GitHub",
@@ -29,7 +36,7 @@
 	},
 	{
 		"title": "Steam",
-		"link": "https://steamcommunity.com/profiles/76561198019506098",
+		"link": "https://steamcommunity.com/id/realdna",
 		"icon": "steam",
 		"id": "steam",
 		"highlight": false
@@ -39,27 +46,6 @@
 		"link": "https://twitter.com/@dnascanner",
 		"icon": "twitter",
 		"id": "twitter",
-		"highlight": false
-	},
-	{
-		"title": "Reddit",
-		"link": "https://www.reddit.com/user/DNAScannerMC",
-		"icon": "reddit",
-		"id": "reddit",
-		"highlight": false
-	},
-	{
-		"title": "Twitch",
-		"link": "https://www.twitch.tv/dnascanner",
-		"icon": "twitch",
-		"id": "twitch",
-		"highlight": false
-	},
-	{
-		"title": "YouTube",
-		"link": "https://youtube.dnascanner.de/",
-		"icon": "youtube",
-		"id": "youtube",
 		"highlight": false
 	}
 ]

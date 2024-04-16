@@ -130,6 +130,7 @@ try {
 	for (const social of socials) {
 		const container = document.createElement("a");
 		container.classList.add("socials-card-container");
+		container.classList.add(`socials-card-${social.icon}`);
 		social.highlight && container.classList.add("highlight");
 		container.href = social.link;
 		container.target = "_blank";
