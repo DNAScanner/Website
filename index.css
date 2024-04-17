@@ -208,7 +208,7 @@ body.rotate {
 #cards > *.highlight {
 	background: linear-gradient(45deg, var(--cyan), var(--purple));
 	rotate: 0deg;
-	transition: all 2s;
+	transition: rotate 2s;
 }
 
 #cards > *.highlight:hover {
