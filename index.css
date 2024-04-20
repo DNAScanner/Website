@@ -136,6 +136,10 @@ body.rotate {
 	color: var(--cyan);
 }
 
+#navigation-container > a.current-section {
+	color: var(--slightly-lighter-gray);
+}
+
 #content {
 	width: 100%;
 	padding-right: 5vw;

@@ -45,7 +45,7 @@ const update = () => {
             }
         }
         if (topSection && bottomSection && topSection !== bottomSection) {
-            let closestSection;
+            let closestSection = null;
             let closestDistance = Infinity;
             for (const section of [topSection, bottomSection]) {
                 const sectionTop = section.offsetTop;
@@ -57,6 +57,9 @@ const update = () => {
                 }
             }
             if (closestSection) {
+                for (const link of document.getElementById("navigation-container").children)
+                    link.classList.remove("current-section");
+                document.getElementById(`navigation-${closestSection.id}`)?.classList.add("current-section");
                 if (Math.abs(closestSection.offsetTop - scrollHeight) > Math.abs(closestSection.offsetTop + closestSection.offsetHeight - 1 - scrollHeight)) {
                     window.scrollTo({
                         top: closestSection.offsetTop + closestSection.offsetHeight - window.innerHeight,
@@ -89,6 +92,7 @@ for (const section of document.getElementById("content").children) {
     link.innerText = section.getAttribute("data-name") || section.id.charAt(0).toUpperCase() + section.id.slice(1);
     document.getElementById("navigation-container")?.appendChild(link);
 }
+document.getElementById("navigation-container").children[0].classList.add("current-section");
 try {
     fetch("https://dnascanner.duckdns.org/tictactoe/").then((response) => {
         if (response.status === 200) {
