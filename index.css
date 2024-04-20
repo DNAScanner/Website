@@ -84,10 +84,6 @@ body.rotate {
 	color: var(--cyan);
 }
 
-#home-tictactoe-mention {
-	display: none;
-}
-
 #profile-picture-container {
 	position: fixed;
 	top: 0;
@@ -251,26 +247,6 @@ body.rotate {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-
-#navigation-tictactoe {
-	display: none;
-}
-
-#tictactoe {
-	padding-top: 0;
-	display: none;
-}
-
-#tictactoe-container {
-	width: 100%;
-	height: 100vh;
-}
-
-#tictactoe-iframe {
-	width: 100%;
-	height: 100%;
-}
-
 #projects {
 	flex-wrap: wrap;
 	flex-direction: row;

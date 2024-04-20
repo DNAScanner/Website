@@ -6,6 +6,66 @@ let lastTimeScrolled = Date.now();
 let lastScrollHeight = 0;
 let autoScrollOn = !("ontouchstart" in window);
 
+type Social = {
+	title: string;
+	link: string;
+	icon: string;
+	id: string;
+	highlight: boolean;
+};
+
+const socials: Social[] = [
+	{
+		title: "Discord",
+		link: "https://discord.com/users/538033136685285396",
+		icon: "discord",
+		id: "discord",
+		highlight: false,
+	},
+	{
+		title: "OhHellNaw",
+		link: "https://ohhellnaw.de",
+		icon: "ohhellnaw",
+		id: "ohhellnaw",
+		highlight: true,
+	},
+	{
+		title: "PayPal",
+		link: "https://paypal.me/dnascanner",
+		icon: "paypal",
+		id: "paypal",
+		highlight: false,
+	},
+	{
+		title: "GitHub",
+		link: "https://github.com/DNAScanner",
+		icon: "github",
+		id: "github",
+		highlight: false,
+	},
+	{
+		title: "Spotify",
+		link: "https://open.spotify.com/user/9tcgf7pzh5l7x996g42l7xtrp",
+		icon: "spotify",
+		id: "spotify",
+		highlight: false,
+	},
+	{
+		title: "Steam",
+		link: "https://steamcommunity.com/id/realdna",
+		icon: "steam",
+		id: "steam",
+		highlight: false,
+	},
+	{
+		title: "Twitter",
+		link: "https://twitter.com/@dnascanner",
+		icon: "twitter",
+		id: "twitter",
+		highlight: false,
+	},
+];
+
 document.addEventListener("scroll", () => {
 	lastTimeScrolled = Date.now();
 	autoScrollHappened = false;
@@ -116,21 +176,7 @@ for (const section of document.getElementById("content")!.children) {
 
 document.getElementById("navigation-container").children[0].classList.add("current-section");
 
-try {
-	fetch("https://dnascanner.duckdns.org/tictactoe/").then((response) => {
-		if (response.status === 200) {
-			document.getElementById("navigation-tictactoe")!.style.display = "block";
-			document.getElementById("tictactoe")!.style.display = "block";
-			document.getElementById("home-tictactoe-mention")!.style.display = "block";
-		}
-	});
-} catch (_error) {
-	null;
-}
-
 (async () => {
-	const socials = await (await fetch("./socials.json")).json();
-
 	for (const social of socials) {
 		const container = document.createElement("a");
 		container.classList.add("socials-card-container");
