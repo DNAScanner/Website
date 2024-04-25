@@ -247,6 +247,7 @@ body.rotate {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+
 #projects {
 	flex-wrap: wrap;
 	flex-direction: row;
