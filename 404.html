@@ -3,11 +3,16 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>404</title>
 	</head>
 	<body>
 		<script>
-			while (true) location.href = new URL(window.location.href).origin + "/#not-found";
+			(async () => {
+				while (true) {
+					location.href = new URL(window.location.href).origin + "/#not-found";
+					await new Promise((resolve) => setTimeout(resolve, 1000));
+				}
+			})();
 		</script>
 	</body>
 </html>
