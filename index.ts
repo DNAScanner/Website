@@ -174,7 +174,7 @@ for (const section of document.getElementById("content")!.children) {
 	document.getElementById("navigation-container")?.appendChild(link);
 }
 
-document.getElementById("navigation-container").children[0].classList.add("current-section");
+document.getElementById("navigation-container")?.children[0].classList.add("current-section");
 
 (async () => {
 	for (const social of socials) {
@@ -286,7 +286,7 @@ type Pin = {
 			entry.appendChild(part);
 		}
 
-		document.querySelector("#projects").appendChild(wrapper);
+		document.querySelector("#projects")?.appendChild(wrapper);
 
 		if (widestChild < wrapper.getBoundingClientRect().width + 10) widestChild = wrapper.getBoundingClientRect().width + 10;
 	}
@@ -295,5 +295,3 @@ type Pin = {
 		for (const pin of Array.from(document.querySelectorAll(".pin-wrapper")) as HTMLDivElement[]) pin.style.width = widestChild + "px";
 	}, 100);
 })();
-
-export {};

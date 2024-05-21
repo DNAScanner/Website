@@ -1,4 +1,15 @@
-const sections = document.getElementById("content")?.children;
+"use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var _a, _b, _c;
+const sections = (_a = document.getElementById("content")) === null || _a === void 0 ? void 0 : _a.children;
 const spoilers = document.getElementsByClassName("spoiler");
 let showNotFound = location.hash === "#not-found";
 let autoScrollHappened = true;
@@ -69,6 +80,7 @@ document.addEventListener("keydown", (event) => {
     document.body.classList.add("rotate");
 });
 const update = () => {
+    var _a;
     const scrollHeight = window.scrollY + window.innerHeight * 0.5;
     if (location.hash) {
         const section = document.getElementById(location.hash.slice(1));
@@ -110,7 +122,7 @@ const update = () => {
             if (closestSection) {
                 for (const link of document.getElementById("navigation-container").children)
                     link.classList.remove("current-section");
-                document.getElementById(`navigation-${closestSection.id}`)?.classList.add("current-section");
+                (_a = document.getElementById(`navigation-${closestSection.id}`)) === null || _a === void 0 ? void 0 : _a.classList.add("current-section");
                 if (Math.abs(closestSection.offsetTop - scrollHeight) > Math.abs(closestSection.offsetTop + closestSection.offsetHeight - 1 - scrollHeight)) {
                     window.scrollTo({
                         top: closestSection.offsetTop + closestSection.offsetHeight - window.innerHeight,
@@ -141,10 +153,11 @@ for (const section of document.getElementById("content").children) {
     link.href = `#${section.id}`;
     link.id = `navigation-${section.id}`;
     link.innerText = section.getAttribute("data-name") || section.id.charAt(0).toUpperCase() + section.id.slice(1);
-    document.getElementById("navigation-container")?.appendChild(link);
+    (_b = document.getElementById("navigation-container")) === null || _b === void 0 ? void 0 : _b.appendChild(link);
 }
-document.getElementById("navigation-container").children[0].classList.add("current-section");
-(async () => {
+(_c = document.getElementById("navigation-container")) === null || _c === void 0 ? void 0 : _c.children[0].classList.add("current-section");
+(() => __awaiter(void 0, void 0, void 0, function* () {
+    var _d, _e, _f;
     for (const social of socials) {
         const container = document.createElement("a");
         container.classList.add("socials-card-container");
@@ -166,18 +179,19 @@ document.getElementById("navigation-container").children[0].classList.add("curre
         container.appendChild(icon);
         container.appendChild(title);
         container.appendChild(link);
-        document.getElementById("cards")?.appendChild(container);
+        (_d = document.getElementById("cards")) === null || _d === void 0 ? void 0 : _d.appendChild(container);
     }
     if (!showNotFound)
-        document.getElementById("not-found")?.classList.add("hidden");
+        (_e = document.getElementById("not-found")) === null || _e === void 0 ? void 0 : _e.classList.add("hidden");
     else {
         while (showNotFound)
-            await new Promise((resolve) => setTimeout(resolve, 100));
-        document.getElementById("not-found")?.classList.add("hidden");
+            yield new Promise((resolve) => setTimeout(resolve, 100));
+        (_f = document.getElementById("not-found")) === null || _f === void 0 ? void 0 : _f.classList.add("hidden");
     }
-})();
-(async () => {
-    const pins = await (await fetch("https://gh-pins.dnascanner.de/raw/dnascanner", { cache: "force-cache" })).json();
+}))();
+(() => __awaiter(void 0, void 0, void 0, function* () {
+    var _g;
+    const pins = yield (yield fetch("https://gh-pins.dnascanner.de/raw/dnascanner", { cache: "force-cache" })).json();
     let widestChild = 0;
     for (const pin of pins) {
         const wrapper = document.createElement("div");
@@ -227,7 +241,7 @@ document.getElementById("navigation-container").children[0].classList.add("curre
             part.textContent = String(Math.floor(lang.part * 1000) / 10) + "%";
             entry.appendChild(part);
         }
-        document.querySelector("#projects").appendChild(wrapper);
+        (_g = document.querySelector("#projects")) === null || _g === void 0 ? void 0 : _g.appendChild(wrapper);
         if (widestChild < wrapper.getBoundingClientRect().width + 10)
             widestChild = wrapper.getBoundingClientRect().width + 10;
     }
@@ -235,5 +249,5 @@ document.getElementById("navigation-container").children[0].classList.add("curre
         for (const pin of Array.from(document.querySelectorAll(".pin-wrapper")))
             pin.style.width = widestChild + "px";
     }, 100);
-})();
-export {};
+}))();
+//# sourceMappingURL=index.js.map

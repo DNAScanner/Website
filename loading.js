@@ -1,3 +1,4 @@
+"use strict";
 const style = document.createElement("style");
 style.innerHTML = `
   	loading > * {animation: loading 1.5s infinite}
@@ -28,3 +29,4 @@ const observer = new MutationObserver((mutations) => {
     }
 });
 observer.observe(document.body, { childList: true, subtree: true });
+//# sourceMappingURL=loading.js.map
