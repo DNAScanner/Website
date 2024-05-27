@@ -247,7 +247,12 @@ body {
 			flex-direction: row;
 			align-content: center;
 
-			& > * {
+			& > .loading {
+				color: var(--slightly-lighter-gray);
+				font-size: clamp(3rem, 5vw, 5rem);
+			}
+
+			& > .pin-wrapper {
 				position: relative;
 				display: flex;
 				align-items: center;

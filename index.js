@@ -198,6 +198,8 @@ for (const section of document.getElementById("content").children) {
     var _g;
     const pins = yield (yield fetch("https://gh-pins.dnascanner.de/raw/dnascanner", { cache: "force-cache" })).json();
     let widestChild = 0;
+    for (const child of Array.from(document.querySelector("#projects").children))
+        child.remove();
     for (const pin of pins) {
         const wrapper = document.createElement("div");
         wrapper.classList.add("pin-wrapper");

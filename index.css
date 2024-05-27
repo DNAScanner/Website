@@ -218,7 +218,11 @@ body.rotate {
   flex-direction: row;
   align-content: center;
 }
-#site > #content > #projects > * {
+#site > #content > #projects > .loading {
+  color: var(--slightly-lighter-gray);
+  font-size: clamp(3rem, 5vw, 5rem);
+}
+#site > #content > #projects > .pin-wrapper {
   position: relative;
   display: flex;
   align-items: center;
@@ -231,26 +235,26 @@ body.rotate {
   transition: all 0.3s ease;
   cursor: pointer;
 }
-#site > #content > #projects > *:hover {
+#site > #content > #projects > .pin-wrapper:hover {
   background-color: var(--light-gray);
   box-shadow: 0 0 2rem var(--shadow);
   transform: translateY(-0.25rem);
 }
-#site > #content > #projects > * > .pin-title {
+#site > #content > #projects > .pin-wrapper > .pin-title {
   position: absolute;
   top: 0.25rem;
   left: 50%;
   transform: translateX(-50%);
   font-weight: 500;
 }
-#site > #content > #projects > * > canvas {
+#site > #content > #projects > .pin-wrapper > canvas {
   align-self: left;
   margin-left: 1rem;
   height: 75%;
   aspect-ratio: 1/1;
   image-rendering: crisp-edges;
 }
-#site > #content > #projects > * > .lang-wrapper {
+#site > #content > #projects > .pin-wrapper > .lang-wrapper {
   align-self: right;
   display: flex;
   flex-wrap: wrap;
@@ -258,7 +262,7 @@ body.rotate {
   margin-right: 1rem;
   gap: 0.125rem;
 }
-#site > #content > #projects > * > .lang-wrapper > .lang-entry {
+#site > #content > #projects > .pin-wrapper > .lang-wrapper > .lang-entry {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -267,7 +271,7 @@ body.rotate {
   gap: 10px;
   width: 100%;
 }
-#site > #content > #projects > * > .lang-wrapper > .lang-entry > .lang-color {
+#site > #content > #projects > .pin-wrapper > .lang-wrapper > .lang-entry > .lang-color {
   height: 15px;
   width: 15px;
   border-radius: 50%;

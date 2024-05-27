@@ -231,6 +231,8 @@ type Pin = {
 	const pins: Pin[] = await (await fetch("https://gh-pins.dnascanner.de/raw/dnascanner", {cache: "force-cache"})).json();
 	let widestChild = 0;
 
+	for (const child of Array.from(document.querySelector("#projects")!.children)) child.remove();
+
 	for (const pin of pins) {
 		const wrapper = document.createElement("div");
 		wrapper.classList.add("pin-wrapper");
