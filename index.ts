@@ -170,6 +170,10 @@ for (const section of document.getElementById("content")!.children) {
 	link.href = `#${section.id}`;
 	link.id = `navigation-${section.id}`;
 	link.innerText = section.getAttribute("data-name") || section.id.charAt(0).toUpperCase() + section.id.slice(1);
+	link.addEventListener("click", () => {
+		for (const link of document.getElementById("navigation-container")!.children) link.classList.remove("current-section");
+		link.classList.add("current-section");
+	})
 
 	document.getElementById("navigation-container")?.appendChild(link);
 }

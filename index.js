@@ -153,6 +153,11 @@ for (const section of document.getElementById("content").children) {
     link.href = `#${section.id}`;
     link.id = `navigation-${section.id}`;
     link.innerText = section.getAttribute("data-name") || section.id.charAt(0).toUpperCase() + section.id.slice(1);
+    link.addEventListener("click", () => {
+        for (const link of document.getElementById("navigation-container").children)
+            link.classList.remove("current-section");
+        link.classList.add("current-section");
+    });
     (_b = document.getElementById("navigation-container")) === null || _b === void 0 ? void 0 : _b.appendChild(link);
 }
 (_c = document.getElementById("navigation-container")) === null || _c === void 0 ? void 0 : _c.children[0].classList.add("current-section");
