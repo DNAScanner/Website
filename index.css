@@ -180,6 +180,8 @@ body.rotate {
 }
 #site > #content > #socials > #cards > *:hover {
   background-color: var(--light-gray);
+}
+#site > #content > #socials > #cards > *:hover:not(.highlight) {
   box-shadow: 0 0 2rem var(--shadow);
   transform: translateY(-0.15rem);
 }
@@ -189,7 +191,7 @@ body.rotate {
   transition: rotate 2s;
 }
 #site > #content > #socials > #cards > *.highlight:hover {
-  transform: rotate(360deg);
+  rotate: 360deg;
 }
 #site > #content > #socials > #cards > * > .socials-card-icon {
   max-width: 5rem;

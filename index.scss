@@ -199,8 +199,11 @@ body {
 
 					&:hover {
 						background-color: var(--light-gray);
-						box-shadow: 0 0 2rem var(--shadow);
-						transform: translateY(-0.15rem);
+
+						&:not(.highlight) {
+							box-shadow: 0 0 2rem var(--shadow);
+							transform: translateY(-0.15rem);
+						}
 					}
 
 					&.highlight {
@@ -209,7 +212,7 @@ body {
 						transition: rotate 2s;
 
 						&:hover {
-							transform: rotate(360deg);
+							rotate: 360deg;
 						}
 					}
 
