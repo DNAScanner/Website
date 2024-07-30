@@ -15,7 +15,7 @@ Number.prototype.toShort = function (): string {
 	return this.toFixed(1);
 };
 
-enum ForegroundColor {
+export enum ForegroundColor {
 	BLACK = "30",
 	RED = "31",
 	GREEN = "32",
@@ -34,7 +34,7 @@ enum ForegroundColor {
 	LIGHT_WHITE = "97",
 }
 
-enum BackgroundColor {
+export enum BackgroundColor {
 	BLACK = "40",
 	RED = "41",
 	GREEN = "42",
@@ -53,7 +53,7 @@ enum BackgroundColor {
 	LIGHT_WHITE = "107",
 }
 
-enum TextStyle {
+export enum TextStyle {
 	RESET = 0,
 	BOLD = 1,
 	ITALIC = 3,
@@ -62,7 +62,7 @@ enum TextStyle {
 	BLINK = 7,
 }
 
-type TableItem = {
+export type TableItem = {
 	text: string | number;
 	color?: ForegroundColor;
 	colorRGB?: [number, number, number];
@@ -76,13 +76,13 @@ type TableItem = {
 	link?: string;
 };
 
-type TableBuilderOptions = {
+export type TableBuilderOptions = {
 	showIndex?: boolean;
 	gap?: number;
 	items: TableItem[][][];
 };
 
-const table = ({showIndex = true, gap = 1, items}: TableBuilderOptions) => {
+export const table = ({showIndex = true, gap = 1, items}: TableBuilderOptions) => {
 	let text = "";
 
 	// Convert all item#.texts to strings; if they are numbers, format them
@@ -154,5 +154,3 @@ const table = ({showIndex = true, gap = 1, items}: TableBuilderOptions) => {
 
 	return text;
 };
-
-export {table}
