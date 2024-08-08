@@ -60,10 +60,10 @@ const socials = [
         highlight: false,
     },
     {
-        title: "Twitter",
-        link: "https://twitter.com/@dnascanner",
-        icon: "twitter",
-        id: "twitter",
+        title: "X",
+        link: "https://x.com/@dnascanner",
+        icon: "x",
+        id: "x",
         highlight: false,
     },
 ];
