@@ -11,7 +11,7 @@ const progressFetch = async (url: string, output: string, refreshRate?: number) 
 	const chunks = [];
 	console.log("\n");
 	const logInterval = setInterval(() => {
-		const consoleWidth = Deno.consoleSize().columns -25;
+		const consoleWidth = Deno.consoleSize().columns - 25;
 		const elapsedTime = (Date.now() - startTime) / 1000;
 		const downloadSpeed = receivedBytes / elapsedTime / 1024 / 1024;
 		const remainingBytes = totalBytes - receivedBytes;

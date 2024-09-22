@@ -1,18 +1,9 @@
-export {};
-
-// Declare the method in the global scope
-declare global {
-	interface Number {
-		toShort(): string;
-	}
-}
-
 // Define the method on the Number prototype
-Number.prototype.toShort = function (): string {
-	if (this >= 1_000_000_000) return (this / 1_000_000_000).toFixed(1) + "B";
-	if (this >= 1_000_000) return (this / 1_000_000).toFixed(1) + "M";
-	if (this >= 1_000) return (this / 1_000).toFixed(1) + "K";
-	return this.toFixed(1);
+const toShort = (number: number): string => {
+	if (number >= 1_000_000_000) return (number / 1_000_000_000).toFixed(1) + "B";
+	if (number >= 1_000_000) return (number / 1_000_000).toFixed(1) + "M";
+	if (number >= 1_000) return (number / 1_000).toFixed(1) + "K";
+	return number.toFixed(1);
 };
 
 export enum ForegroundColor {
@@ -90,18 +81,19 @@ export const table = ({showIndex = true, gap = 1, items}: TableBuilderOptions) =
 		for (const row of item)
 			for (const column of row) {
 				if (typeof column.text === "number") {
-					const text = column.text.toShort();
+					const text = toShort(column.text);
 					column.text = text;
 				}
 			}
 
 	// Get the maximum length of each column and save them in an array
 	const maxLengths: number[] = [];
-	for (const item in items)
-		for (const row in items[item])
-			for (const column in items[item][row]) {
-				const length = items[item][row][column].text.toString().length + 1;
-				if (maxLengths[column] === undefined || length > maxLengths[column]) maxLengths[column] = length;
+	for (const item of items)
+		for (const row of item)
+			for (const columnIndex in row) {
+				const column = row[columnIndex];
+				const length = column.text.toString().length + 1;
+				if (maxLengths[columnIndex] === undefined || length > maxLengths[columnIndex]) maxLengths[columnIndex] = length;
 			}
 
 	// Add the index column
@@ -120,7 +112,7 @@ export const table = ({showIndex = true, gap = 1, items}: TableBuilderOptions) =
 		for (const rowIndex in item) {
 			const row = item[rowIndex];
 
-			if (rowIndex !== "0") text += "\n" + " ".repeat(maxLengths[0]);
+			if (rowIndex !== "0") text += "\n" + (showIndex ? " ".repeat(maxLengths[0]) : "");
 
 			for (const columnIndex in row) {
 				const column = row[columnIndex];
