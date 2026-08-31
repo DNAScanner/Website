@@ -318,27 +318,6 @@ body {
 			}
 		}
 
-		& > #imprint {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 100%;
-			font-size: clamp(1rem, 1.5vw, 2rem);
-
-			& > *.spoiler::after {
-				font-size: 4rem;
-			}
-
-			& > #imprint-details {
-				margin-top: 3rem;
-				width: max-content;
-
-				& > * {
-					text-align: center;
-				}
-			}
-		}
-
 		& > #not-found {
 			display: flex;
 			justify-content: center;

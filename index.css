@@ -279,23 +279,6 @@ body.rotate {
   border-radius: 50%;
   aspect-ratio: 1/1;
 }
-#site > #content > #imprint {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  font-size: clamp(1rem, 1.5vw, 2rem);
-}
-#site > #content > #imprint > *.spoiler::after {
-  font-size: 4rem;
-}
-#site > #content > #imprint > #imprint-details {
-  margin-top: 3rem;
-  width: max-content;
-}
-#site > #content > #imprint > #imprint-details > * {
-  text-align: center;
-}
 #site > #content > #not-found {
   display: flex;
   justify-content: center;
